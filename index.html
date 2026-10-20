@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lupi Nails · Salón de uñas en Sant Just Desvern</title>
+<meta name="description" content="Manicura, pedicura, nail art a mano alzada, pestañas, cejas y masajes en la Plaça Maragall de Sant Just Desvern. Reserva en Booksy.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e0e0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Big+Shoulders+Display:wght@500;700;800;900&family=Archivo:wdth,wght@62..125,200..700&display=swap">
+<style>
+:root{
+  --techo:#0e0e0f; --acero:#161718; --zinc:#a9adb1; --cal:#f1eee9; --cal-2:#e6e1d9; --hormigon:#bdb8b0;
+  --ladrillo:#a4573b; --cobre:#c27c57; --cobre-2:#e8b48f; --lila:#d4c6e0; --lila-2:#b9a5cc;
+  --neon:#fff4dd; --marron:#3a2a20; --oro:#b8915a; --oro:#d9bc7a; --muro:#e8e5df; --cuero:#2f1f1a; --cuero-2:#4a3128;
+  --oxido:#b9482a; --lavanda:#6f58a8; --trigo:#d8c48a; --eucalipto:#9fb09b;
+  --tinta:#141414; --gris:#5f5c58; --linea:rgba(20,20,20,.16);
+  --rotulo:"Big Shoulders Display",Impact,sans-serif; --texto:"Archivo",system-ui,sans-serif; --neon-f:"Neonderthaw",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cal);color:var(--tinta);font:400 17px/1.55 var(--texto);font-stretch:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cobre);outline-offset:3px}
+.g{max-width:1320px;margin:0 auto;padding-inline:24px}
+.eti{font:600 .74rem/1.4 var(--texto);font-stretch:118%;letter-spacing:.16em;text-transform:uppercase}
+.r{font-family:var(--rotulo);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:.88;margin:0}
+.pend{display:inline-block;white-space:nowrap;font:500 .68rem/1.5 var(--texto);letter-spacing:.02em;text-transform:none;border:1px dashed currentColor;opacity:.75;padding:1px 8px;border-radius:999px;vertical-align:middle}
+.neon{font-family:var(--neon-f);font-weight:400;color:var(--neon);text-transform:none;letter-spacing:0;line-height:1;
+  text-shadow:0 0 2px #fff,0 0 8px #fff3d6,0 0 18px #ffd59a,0 0 38px #ffb15e,0 0 80px rgba(255,150,70,.55)}
+.neon.enciende{animation:enciende 2.4s steps(1,end) .4s both}
+@keyframes enciende{0%{opacity:.08;text-shadow:none}8%{opacity:1}11%{opacity:.15;text-shadow:none}16%{opacity:1}20%{opacity:.3}24%,100%{opacity:1}}
+.neon.parpadeo{animation:parpadeo 7s infinite}
+@keyframes parpadeo{0%,92%,100%{opacity:1}93%{opacity:.55}94%{opacity:1}96%{opacity:.7}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .95rem var(--texto);font-stretch:110%;letter-spacing:.02em;padding:15px 24px;text-decoration:none;background:var(--cobre);color:#fff;border:0;border-radius:2px;transition:background .25s,transform .25s}
+.btn:hover{background:#a8633f}
+.btn.acero{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.acero:hover{background:rgba(255,255,255,.08)}
+
+/* ——— Barra: marca en neón, enlaces e idiomas ——— */
+.barra{position:fixed;inset:0 0 auto;z-index:30;color:var(--cal);transition:background .35s}
+.barra.solida{background:rgba(14,14,15,.92);backdrop-filter:blur(12px)}
+.barra .g{display:flex;align-items:center;gap:26px;height:72px}
+.marca{display:block;color:var(--cal);line-height:0}.marca svg{display:block;height:46px;width:85px;overflow:visible}
+.barra nav{display:flex;gap:22px;margin-left:auto;font:600 .8rem var(--texto);font-stretch:115%;letter-spacing:.12em;text-transform:uppercase}
+.barra nav a{text-decoration:none;opacity:.78}
+.barra nav a:hover{opacity:1}
+.idiomas{display:flex;gap:2px;font:600 .72rem var(--texto);letter-spacing:.08em}
+.idiomas button{all:unset;cursor:pointer;padding:6px 8px;opacity:.5}
+.idiomas button[aria-pressed="true"]{opacity:1;box-shadow:inset 0 -2px 0 var(--cobre-2)}
+.barra .btn{padding:10px 16px;font-size:.84rem}
+@media (max-width:900px){.barra nav{display:none}.idiomas{margin-left:auto}.barra .g{gap:12px}.barra .btn{display:none}}
+
+/* ——— Entrada: techo negro, tubos y lámparas de cobre en 3D ——— */
+.entrada{position:relative;min-height:max(100svh,640px);background:#0b0a0a;color:var(--cal);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+#lamparas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sin-gl #lamparas{display:none}
+.sin-gl .entrada{background:radial-gradient(60% 50% at 50% 30%,#3a2416,#0b0a0a 70%)}
+.entrada .g{position:relative;z-index:2;width:100%;padding-bottom:56px}
+.entrada .rotulo-neon{font-size:clamp(3.6rem,min(15vw,19svh),13.5rem);white-space:nowrap;margin:0 0 .05em -.04em;pointer-events:none}
+.entrada .lema{font-size:clamp(2.3rem,min(5.6vw,7.4svh),5rem);max-width:15ch;color:var(--cal)}
+.entrada .lema span{color:var(--cobre-2)}
+.entrada-pie{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:30px;flex-wrap:wrap}
+.entrada-pie p{max-width:42ch;color:rgba(241,238,233,.74);font-size:1.05rem}
+.entrada-pie .acciones{display:flex;gap:12px;flex-wrap:wrap}
+.aviso{position:absolute;top:80px;left:0;right:0;z-index:3;text-align:center;color:rgba(241,238,233,.45)}
+.pista-raton{position:absolute;z-index:3;right:24px;top:96px;color:rgba(241,238,233,.5)}
+@media (max-width:900px){.aviso,.pista-raton{display:none}.entrada .g{padding-bottom:40px}}
+
+
+/* ——— v4: limpia, centrada en servicios y trato; las fotos del local solo como fondo con opacidad ——— */
+section{position:relative}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.cab p{max-width:42ch}
+h2.r{font-size:clamp(2.8rem,5.6vw,5.2rem)}
+p.eti+h2.r{margin-top:14px}
+h2.r span{color:var(--cobre)}
+.oscuro h2.r span{color:var(--cobre-2)}
+.fondo{position:absolute;inset:0;overflow:hidden;z-index:0}
+.fondo img{width:100%;height:100%;object-fit:cover}
+.fondo.lento img{animation:acerca 26s ease-in-out infinite alternate}
+@keyframes acerca{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.sobre{position:relative;z-index:1}
+
+/* El trato: la frase se enciende palabra a palabra al bajar */
+.trato{padding:150px 0 130px;background:var(--cal)}
+.declara{font:500 clamp(1.9rem,3.7vw,3.5rem)/1.16 var(--texto);font-stretch:90%;letter-spacing:-.01em;max-width:24ch;margin:22px 0 80px;color:var(--tinta)}
+.declara .w{opacity:.14;transition:opacity .35s}
+.declara .w.on{opacity:1}
+.declara em{font-style:normal;color:var(--cobre)}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.pilares div{border-top:2px solid var(--tinta);padding-top:20px}
+.pilares b{display:block;font:800 1.9rem/1 var(--rotulo);text-transform:uppercase;margin:12px 0 10px}
+.pilares p{color:var(--gris);max-width:32ch}
+@media (max-width:900px){.pilares{grid-template-columns:1fr;gap:26px}.trato{padding:100px 0 90px}.declara{margin-bottom:56px}}
+
+/* Cinta de servicios */
+.cinta{background:var(--techo);color:var(--cobre-2);overflow:hidden;padding:20px 0;border-block:1px solid rgba(241,238,233,.08)}
+.cinta div{display:flex;width:max-content;animation:cinta 34s linear infinite}
+.cinta span{font:800 clamp(1.8rem,3.6vw,3.2rem)/1 var(--rotulo);text-transform:uppercase;white-space:nowrap;padding-right:.6em}
+.cinta i{font-style:normal;color:rgba(241,238,233,.35);padding-right:.6em}
+@keyframes cinta{to{transform:translateX(-50%)}}
+
+/* Servicios: pestañas sobre el ladrillo del local, muy oscurecido */
+.servicios{padding:130px 0;background:#140d0a;color:var(--cal)}
+.servicios .fondo img{opacity:.28}
+.servicios .fondo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#140d0a 0%,rgba(20,13,10,.55) 30%,rgba(20,13,10,.7) 70%,#140d0a)}
+.servicios .cab p{color:rgba(241,238,233,.72)}
+.pestanas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.pestanas button{all:unset;cursor:pointer;font:600 .86rem var(--texto);font-stretch:112%;letter-spacing:.1em;text-transform:uppercase;padding:13px 20px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(241,238,233,.3);transition:background .3s,color .3s,box-shadow .3s}
+.pestanas button:hover{box-shadow:inset 0 0 0 1.5px var(--cal)}
+.pestanas button[aria-selected="true"]{background:var(--cal);color:var(--tinta);box-shadow:none}
+.panel{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start}
+.panel[hidden]{display:none}
+.panel.entra{animation:entra .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes entra{from{opacity:0;transform:translateY(18px)}}
+.precios{border-top:2px solid var(--cal)}
+.precios div{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(241,238,233,.16)}
+.precios span small{display:block;color:rgba(241,238,233,.55);font-size:.8rem}
+.precios b{font:800 1.6rem/1 var(--rotulo);white-space:nowrap}
+.tarjeta{padding:34px;background:rgba(241,238,233,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(241,238,233,.12)}
+.tarjeta p{font:500 clamp(1.3rem,2vw,1.7rem)/1.3 var(--texto);font-stretch:94%;margin:0 0 28px}
+.tarjeta .eti{color:var(--cobre-2);margin-bottom:14px}
+.desde{font-size:.85rem;color:rgba(241,238,233,.55);margin-top:22px}
+@media (max-width:900px){.panel{grid-template-columns:1fr;gap:30px}.servicios{padding:96px 0}.pestanas{flex-wrap:nowrap;overflow-x:auto;margin-inline:-24px;padding-inline:24px;scrollbar-width:none}.pestanas button{white-space:nowrap}}
+
+/* Elige tu color: textos, debajo la mano sin fondo y debajo los 21 colores en pequeño */
+.color{padding:130px 0 120px;background:var(--cal-2);text-align:center;overflow:hidden}
+.color .g{display:flex;flex-direction:column;align-items:center}
+.color p.intro{color:var(--gris);max-width:40ch;margin:22px auto 0}
+.mano{position:relative;width:min(300px,62vw);aspect-ratio:520/785;margin:26px auto 0;filter:drop-shadow(0 18px 14px rgba(60,30,15,.16))}
+.mano img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .45s;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.elegido{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-top:6px}
+.elegido b{font:800 2rem/1 var(--rotulo);text-transform:uppercase}
+.elegido span{color:var(--gris);font-size:.9rem}
+.muestras{display:grid;grid-template-columns:repeat(21,28px);gap:10px;justify-content:center;margin-top:26px}
+.muestras button{all:unset;cursor:pointer;width:28px;aspect-ratio:1;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.18),inset 0 3px 5px rgba(255,255,255,.35),0 3px 6px -3px rgba(0,0,0,.35);transition:transform .25s,box-shadow .25s}
+.muestras button:hover{transform:scale(1.15)}
+.muestras button[aria-pressed="true"]{transform:scale(1.15);box-shadow:0 0 0 2px var(--cal-2),0 0 0 3.5px var(--tinta)}
+.muestras button:focus-visible{outline:2px solid var(--cobre);outline-offset:5px}
+.color .btn{margin-top:36px}
+@media (max-width:900px){.color{padding:96px 0 90px}.muestras{grid-template-columns:repeat(11,minmax(0,26px));gap:9px 8px}.muestras button{width:100%}}
+
+/* Opiniones: el salón de fondo, en movimiento lento */
+.opiniones{padding:140px 0;background:var(--techo);color:var(--cal);text-align:center;overflow:hidden}
+.opiniones .fondo img{opacity:.22;filter:saturate(.8)}
+.opiniones .fondo::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 50%,rgba(14,14,15,.35),var(--techo))}
+.notas{display:flex;justify-content:center;gap:clamp(40px,8vw,120px);margin:36px 0 60px;flex-wrap:wrap}
+.notas b{display:block;font:800 clamp(4.2rem,9vw,7.5rem)/.9 var(--rotulo)}
+.notas span{font:600 .74rem var(--texto);letter-spacing:.16em;text-transform:uppercase;color:rgba(241,238,233,.6)}
+.estrellas{color:var(--cobre-2);letter-spacing:6px;font-size:1.1rem;margin:8px 0 6px}
+.opiniones blockquote{margin:0 auto;max-width:30ch;font:500 clamp(1.5rem,2.8vw,2.3rem)/1.28 var(--texto);font-stretch:92%;min-height:3.9em;transition:opacity .4s}
+.opiniones cite{display:block;margin-top:18px;font-style:normal;color:rgba(241,238,233,.6)}
+.puntos{display:flex;justify-content:center;gap:8px;margin-top:26px}
+.puntos button{all:unset;cursor:pointer;width:30px;height:3px;background:rgba(241,238,233,.25)}
+.puntos button[aria-pressed="true"]{background:var(--cobre-2)}
+
+/* Instagram */
+.insta{padding:130px 0;background:var(--cal)}
+.perfil{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding:22px 24px;background:#fff;box-shadow:0 20px 40px -30px rgba(0,0,0,.35);margin-bottom:22px}
+.avatar{width:74px;height:74px;border-radius:50%;background:var(--techo);color:var(--cal);display:grid;place-items:center;box-shadow:0 0 0 3px #fff,0 0 0 5px #d9a77f}
+.avatar svg{width:48px;height:26px}
+.perfil .quien b{display:block;font:700 1.15rem var(--texto)}
+.perfil .quien span{color:var(--gris);font-size:.92rem}
+.perfil .cifra{margin-left:auto;text-align:right;font-size:.85rem;color:var(--gris)}
+.perfil .cifra b{display:block;font:800 1.7rem/1 var(--rotulo);color:var(--tinta)}
+.rejilla{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.rejilla a{position:relative;display:block;aspect-ratio:1;overflow:hidden;background:#ddd}
+.rejilla img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.rejilla a::after{content:"♥  Ver en Instagram";position:absolute;inset:0;display:grid;place-items:center;font:600 .82rem var(--texto);letter-spacing:.06em;color:#fff;background:rgba(14,14,15,.45);opacity:0;transition:opacity .3s}
+.rejilla a:hover img{transform:scale(1.06)}
+.rejilla a:hover::after{opacity:1}
+.insta .nota{margin-top:16px;color:var(--gris);font-size:.85rem}.insta .nota .pend{white-space:normal;border-radius:12px}
+@media (max-width:900px){.insta{padding:96px 0}.perfil .cifra{margin-left:0;text-align:left}.rejilla{grid-template-columns:repeat(3,1fr);gap:4px}}
+
+/* Reserva: llamada final sobre la foto de pedicura */
+.reserva{padding:150px 0;color:var(--cal);text-align:center;background:#1a110d;overflow:hidden}
+.reserva .fondo img{opacity:.35}
+.reserva .fondo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,17,13,.85),rgba(26,17,13,.55) 50%,rgba(26,17,13,.9))}
+.reserva .neon{font-size:clamp(3.4rem,8vw,6.5rem);margin-bottom:6px}
+.reserva h2.r{font-size:clamp(3rem,7vw,6.2rem)}
+.reserva p{max-width:44ch;margin:24px auto 36px;color:rgba(241,238,233,.78);font-size:1.08rem}
+.reserva .acciones{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn.grande{padding:19px 34px;font-size:1.05rem}
+
+/* Visita */
+.visita{padding:110px 0;background:var(--hormigon)}
+.visita .g{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.visita h2.r{font-size:clamp(2.4rem,4.4vw,4.2rem)}
+.horas{width:100%;border-collapse:collapse;font-size:1.02rem;border-top:2px solid var(--tinta)}
+.horas td{padding:14px 0;border-bottom:1px solid var(--linea)}
+.horas td:last-child{text-align:right;font-weight:600}
+.contacto{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.contacto .btn.acero{color:var(--tinta)}
+@media (max-width:900px){.visita .g{grid-template-columns:1fr;gap:30px}.visita{padding:90px 0}}
+
+footer{background:var(--techo);color:rgba(241,238,233,.6);padding:90px 0 110px;text-align:center}
+footer .firma-logo{display:block;width:min(380px,66vw);aspect-ratio:149/106;margin:0 auto 60px;color:var(--cal)}
+footer .g{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.8rem}
+footer a{text-decoration:none}
+
+/* Botón flotante de reserva (aparece al salir de la entrada) */
+.flota{position:fixed;right:18px;bottom:18px;z-index:40;border-radius:999px;padding:15px 22px;box-shadow:0 14px 30px -10px rgba(0,0,0,.55);transform:translateY(120px);transition:transform .45s cubic-bezier(.2,.7,.2,1),background .25s}
+.flota.ver{transform:none}
+@media (min-width:901px){.flota{display:none}}
+.flota svg{width:18px;height:18px}
+
+.sube{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.sube.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.sube{opacity:1;transform:none}.declara .w{opacity:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Logo de Lupi Nails vectorizado por Cristian (img/marca/LUPI_Nails_vectorial.svg); colores con currentColor -->
+  <symbol id="logo-corto" viewBox="37 73 149 81"><g fill="currentColor"><path d="M39.2 75.6H48.2V112.4C48.2 121.1 52.2 124.7 60.6 124.7H71.5V127H56.5C44.9 127 39.2 122.3 39.2 112.9Z"/>
+<path d="M72.3 75.6H81.5V109.7C81.5 120.8 87.2 126.2 95.9 126.2C106.7 126.2 113.3 120.6 113.3 110.3V75.6H115.8V110.2C115.8 121.8 108.2 127.7 95.6 127.7C80.4 127.7 72.3 121 72.3 109.1Z"/>
+<path d="M122.9 75.6H143.9C157.6 75.6 165.8 81.9 165.8 91.7C165.8 102.9 157.3 108.6 143.7 108.6H137.4C134.1 108.6 132.2 111.5 132.2 116.5V127H123V115.9C123 110.1 127.2 106.7 133.5 106.7H142.8C151.6 106.7 155.5 101.6 155.5 91.7C155.5 82 151.1 77.4 142.4 77.4H122.9Z"/>
+<path d="M174.3 75.6H183.5V127H174.3Z"/></g><g fill="none" stroke="currentColor" stroke-width="0.78"><path d="M64.1 151.8V139.4L74.6 151.3V139.4"/>
+<path d="M87.7 151.8L93.6 139.4L99.5 151.8M89.5 147.9H97.7"/>
+<path d="M113.3 139.4V151.8"/>
+<path d="M128.9 139.4V151.8H136"/>
+<path d="M157.4 140.3C155.7 139.1 153.7 139 151.7 139.7C149.7 140.4 149 142.6 150.5 144C151.5 144.9 153.8 145.1 155.3 145.7C158.9 147.1 158.3 150.7 155.5 151.6C153.4 152.3 151.1 151.8 149.2 150.7"/></g></symbol>
+  <symbol id="logo-lupi" viewBox="37 73 149 106"><g fill="currentColor"><path d="M39.2 75.6H48.2V112.4C48.2 121.1 52.2 124.7 60.6 124.7H71.5V127H56.5C44.9 127 39.2 122.3 39.2 112.9Z"/>
+<path d="M72.3 75.6H81.5V109.7C81.5 120.8 87.2 126.2 95.9 126.2C106.7 126.2 113.3 120.6 113.3 110.3V75.6H115.8V110.2C115.8 121.8 108.2 127.7 95.6 127.7C80.4 127.7 72.3 121 72.3 109.1Z"/>
+<path d="M122.9 75.6H143.9C157.6 75.6 165.8 81.9 165.8 91.7C165.8 102.9 157.3 108.6 143.7 108.6H137.4C134.1 108.6 132.2 111.5 132.2 116.5V127H123V115.9C123 110.1 127.2 106.7 133.5 106.7H142.8C151.6 106.7 155.5 101.6 155.5 91.7C155.5 82 151.1 77.4 142.4 77.4H122.9Z"/>
+<path d="M174.3 75.6H183.5V127H174.3Z"/></g><g fill="none" stroke="currentColor" stroke-width="0.78"><path d="M64.1 151.8V139.4L74.6 151.3V139.4"/>
+<path d="M87.7 151.8L93.6 139.4L99.5 151.8M89.5 147.9H97.7"/>
+<path d="M113.3 139.4V151.8"/>
+<path d="M128.9 139.4V151.8H136"/>
+<path d="M157.4 140.3C155.7 139.1 153.7 139 151.7 139.7C149.7 140.4 149 142.6 150.5 144C151.5 144.9 153.8 145.1 155.3 145.7C158.9 147.1 158.3 150.7 155.5 151.6C153.4 152.3 151.1 151.8 149.2 150.7"/></g><path fill="#B69A63" d="M96.8 160.7H125.5V162.6H96.8Z"/><g fill="none" stroke="currentColor" stroke-opacity=".8" stroke-width="0.48" stroke-linecap="round" stroke-linejoin="round"><path d="M78.8 172.2C77.8 171.5 75.4 171.6 75.4 173C75.4 174.3 78.7 173.8 78.7 175.4C78.7 177 76.3 177 75.2 176.1"/>
+<path d="M84.7 176.7L86.8 171.8L88.9 176.7M85.3 175.2H88.2"/>
+<path d="M95.5 176.7V171.8L99.3 176.7V171.8"/>
+<path d="M105 171.9H109.3M107.15 171.9V176.7"/>
+<path d="M121.6 171.9V175.1C121.6 177 119.2 177.2 118.6 176"/>
+<path d="M128.1 171.9V175C128.1 177.4 131.9 177.4 131.9 175V171.9"/>
+<path d="M141.8 172.2C140.8 171.5 138.4 171.6 138.4 173C138.4 174.3 141.7 173.8 141.7 175.4C141.7 177 139.3 177 138.2 176.1"/>
+<path d="M147.7 171.9H151.9M149.8 171.9V176.7"/></g></symbol>
+</svg>
+
+<header class="barra" id="barra">
+  <div class="g">
+    <a class="marca" href="#entrada" aria-label="Lupi Nails, inicio"><svg><use href="#logo-corto"/></svg></a>
+    <nav aria-label="Secciones">
+      <a href="#servicios" data-i="n1">Servicios</a>
+      <a href="#color" data-i="n2">Colores</a>
+      <a href="#opiniones" data-i="n3">Opiniones</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#visita" data-i="n5">Visítanos</a>
+    </nav>
+    <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="ca" aria-pressed="false">CA</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="de" aria-pressed="false">DE</button>
+    </div>
+    <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar">Reservar</a>
+  </div>
+</header>
+
+<main>
+<section class="entrada" id="entrada">
+  <canvas id="lamparas" aria-hidden="true"></canvas>
+  <p class="aviso eti" data-i="aviso">Maqueta Mimmic · textos y precios provisionales</p>
+  <p class="pista-raton eti" data-i="pista">Mueve el ratón: las lámparas se balancean</p>
+  <div class="g">
+    <h1 class="neon enciende rotulo-neon">Lupi Nails</h1>
+    <p class="r lema" data-i="lema">Pasa, siéntate. <span>Las manos, de nuestra cuenta.</span></p>
+    <div class="entrada-pie">
+      <p data-i="entrada_p">Manicura, pedicura, nail art a mano alzada, pestañas, cejas y masajes en la Plaça Maragall de Sant Just. Con calma, con detalle y con el trato de siempre.</p>
+      <div class="acciones">
+        <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_booksy">Reservar en Booksy</a>
+        <a class="btn acero" href="#servicios" data-i="ver_serv">Ver servicios ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trato" id="trato">
+  <div class="g">
+    <p class="eti" style="color:var(--cobre)" data-i="tra_eti">El trato</p>
+    <p class="declara" id="declara" data-i="tra_h">Aquí no eres un turno. Te recibimos por tu nombre, te escuchamos y nos tomamos <em>el tiempo que haga falta.</em></p>
+    <div class="pilares">
+      <div class="sube"><span class="eti" style="color:var(--gris)">01</span><b data-i="p1t">Sin prisas</b><p data-i="p1">Cada cita tiene su tiempo reservado, para que salgas exactamente como querías.</p></div>
+      <div class="sube"><span class="eti" style="color:var(--gris)">02</span><b data-i="p2t">Hecho a mano</b><p data-i="p2">Nail art a mano alzada, con pincel. Si lo traes en una foto, lo pintamos.</p></div>
+      <div class="sube"><span class="eti" style="color:var(--gris)">03</span><b data-i="p3t">Cuidado y detalle</b><p data-i="p3">De la cutícula al último brillo, en cada cita. Por eso tenemos un 5,0 en Booksy.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div id="cinta"><span data-i="cinta">Manicura <i>·</i> Pedicura <i>·</i> Nail art <i>·</i> Semipermanente <i>·</i> Gel <i>·</i> Pestañas <i>·</i> Cejas <i>·</i> Masajes <i>·</i></span></div></div>
+
+<section class="servicios oscuro" id="servicios">
+  <div class="fondo" aria-hidden="true"><img src="media/2020111602f1.jpg" alt=""></div>
+  <div class="g sobre">
+    <div class="cab sube">
+      <div>
+        <p class="eti" style="color:var(--cobre-2)" data-i="srv_eti">Servicios</p>
+        <h2 class="r" data-i="srv_h2">Lo que hacemos <span>por ti.</span></h2>
+      </div>
+      <p data-i="srv_p">Precios de Booksy. Elige el servicio, el día y la hora, y te llega la confirmación al móvil.</p>
+    </div>
+    <div class="pestanas" role="tablist" aria-label="Servicios">
+      <button role="tab" aria-selected="true" aria-controls="pn1" id="tb1" data-i="tb1">Manos</button>
+      <button role="tab" aria-selected="false" aria-controls="pn2" id="tb2" data-i="tb2">Pies</button>
+      <button role="tab" aria-selected="false" aria-controls="pn3" id="tb3" data-i="tb3">Mirada</button>
+      <button role="tab" aria-selected="false" aria-controls="pn4" id="tb4" data-i="tb4">Estética y masajes</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="pn1" aria-labelledby="tb1">
+      <div class="precios">
+        <div><span><span data-i="m1">Semipermanente básica</span><small>30 min</small></span><b>20 €</b></div>
+        <div><span><span data-i="m2">Semipermanente Xpress</span><small>45 min</small></span><b>28 €</b></div>
+        <div><span><span data-i="m3">Xpress con francesa</span><small>50 min</small></span><b>33 €</b></div>
+        <div><span><span data-i="m4">Uñas de gel y relleno</span><small data-i="segun">según diseño</small></span><b><span class="pend" data-i="pend">pendiente</span></b></div>
+        <div><span><span data-i="m5">Nail art a mano alzada</span><small data-i="m5s">tráenos una foto</small></span><b><span class="pend" data-i="pend">pendiente</span></b></div>
+      </div>
+      <div class="tarjeta"><p class="eti" data-i="tb1">Manos</p><p data-i="d1">Semipermanente que aguanta, francesa limpia y diseños pintados a mano, sin pegatinas.</p><a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="res_booksy">Reservar en Booksy →</a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn2" aria-labelledby="tb2" hidden>
+      <div class="precios">
+        <div><span><span data-i="pe1">Pedicura</span><small>1 h</small></span><b>33 €</b></div>
+        <div><span><span data-i="pe2">Pedicura semipermanente</span><small>1 h</small></span><b>38 €</b></div>
+        <div><span><span data-i="pe3">ManiPedi semi básica</span><small>1 h</small></span><b>35 €</b></div>
+        <div><span><span data-i="pe4">ManiPedi semi completo</span><small>1 h 45 min</small></span><b>60 €</b></div>
+      </div>
+      <div class="tarjeta"><p class="eti" data-i="tb2">Pies</p><p data-i="d2">En sillones de piel, con agua caliente y una hora solo para ti. También en pack con manicura.</p><a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="res_booksy">Reservar en Booksy →</a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn3" aria-labelledby="tb3" hidden>
+      <div class="precios">
+        <div><span><span data-i="mi1">Lifting y tinte de pestañas</span><small data-i="conf">servicio a confirmar</small></span><b><span class="pend" data-i="pend">pendiente</span></b></div>
+        <div><span><span data-i="mi2">Diseño y depilación de cejas</span><small data-i="conf">servicio a confirmar</small></span><b><span class="pend" data-i="pend">pendiente</span></b></div>
+      </div>
+      <div class="tarjeta"><p class="eti" data-i="tb3">Mirada</p><p data-i="d3">Pestañas y cejas para completar el look, en la misma visita que tus uñas.</p><a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="res_booksy">Reservar en Booksy →</a></div>
+    </div>
+    <div class="panel" role="tabpanel" id="pn4" aria-labelledby="tb4" hidden>
+      <div class="precios">
+        <div><span><span data-i="es1">Masaje relajante</span><small>1 h 15 min</small></span><b>50 €</b></div>
+        <div><span><span data-i="es2">Facial con luz LED</span><small data-i="es2s">según tratamiento</small></span><b><span class="pend" data-i="pend">pendiente</span></b></div>
+      </div>
+      <div class="tarjeta"><p class="eti" data-i="tb4">Estética y masajes</p><p data-i="d4">Una cabina aparte, con la luz baja, para desconectar de verdad.</p><a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="res_booksy">Reservar en Booksy →</a></div>
+    </div>
+    <p class="desde" data-i="desde">Servicios desde 6 € hasta 85 €. La lista completa y actualizada está en Booksy.</p>
+  </div>
+</section>
+
+<section class="color" id="color">
+  <div class="g sube">
+    <p class="eti" style="color:var(--cobre)" data-i="col_eti">Elige tu color</p>
+    <h2 class="r" data-i="col_h2">¿Qué color <span>te apetece hoy?</span></h2>
+    <p class="intro" data-i="col_p">Toca un color y míralo en una mano. Después, enséñaselo a Andrea al reservar. <span class="pend">colores reales de su carta</span></p>
+    <div class="mano"><img id="mano-a" alt=""><img id="mano-b" alt="" style="opacity:0"></div>
+    <div class="elegido" aria-live="polite"><b id="color-nombre">Cereza</b><span id="color-num">Nº 01</span></div>
+    <div class="muestras" id="muestras" role="group" aria-label="Colores"></div>
+    <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_color">Reservar con este color</a>
+  </div>
+</section>
+
+<section class="opiniones" id="opiniones">
+  <div class="fondo lento" aria-hidden="true"><img src="media/7e269071d86f.jpg" alt=""></div>
+  <div class="g sobre">
+    <p class="eti" style="color:rgba(241,238,233,.55)" data-i="op_eti">Opiniones</p>
+    <div class="notas">
+      <div><b data-cuenta="5.0">5,0</b><div class="estrellas">★★★★★</div><span data-i="c_bk">243 reseñas en Booksy</span></div>
+      <div><b data-cuenta="4.7">4,7</b><div class="estrellas">★★★★★</div><span data-i="c_gg">71 reseñas en Google</span></div>
+    </div>
+    <blockquote id="cita">«Texto de una reseña real sobre el trato y el resultado.»</blockquote>
+    <cite id="autora">Nombre · mes 2026</cite>
+    <div class="puntos" role="group" aria-label="Reseñas"><button type="button" aria-pressed="true" aria-label="1"></button><button type="button" aria-pressed="false" aria-label="2"></button><button type="button" aria-pressed="false" aria-label="3"></button></div>
+  </div>
+</section>
+
+<section class="insta" id="instagram">
+  <div class="g">
+    <div class="cab sube">
+      <div>
+        <p class="eti" style="color:var(--cobre)">Instagram</p>
+        <h2 class="r" data-i="ig_h2">Lo último, <span>recién pintado.</span></h2>
+      </div>
+      <p style="color:var(--gris)" data-i="ig_p">Cada semana subimos diseños nuevos. Síguenos y llega a tu cita con la idea clara.</p>
+    </div>
+    <div class="perfil sube">
+      <div class="avatar"><svg><use href="#logo-corto"/></svg></div>
+      <div class="quien"><b>@im.lupinails</b><span data-i="ig_bio">Manicura, pedicura y nail art a mano alzada · Sant Just</span></div>
+      <div class="cifra"><b>2.000+</b><span data-i="ig_fol">seguidores</span></div>
+      <a class="btn" href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener" data-i="ig_seg">Seguir en Instagram</a>
+    </div>
+    <div class="rejilla sube">
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/c30b33fac1e8.jpg" alt="Uñas de invierno con estrella roja y rayas" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/de6b7e47aa10.jpg" alt="Uñas nude con purpurina" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/7fb1195b140e.jpg" alt="Uñas rojas de Navidad con copo de nieve" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/ab1417fa9314.jpg" alt="Nail art pintado a mano con pincel" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/eae301f5873d.jpg" alt="Uñas babyboomer con la tarjeta I'm Lupi Nails" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/41b4e1a5b273.jpg" alt="El salón decorado para Halloween" loading="lazy"></a>
+    </div>
+    <p class="nota"><span class="pend" data-i="ig_nota">En la web final, esta sección se actualiza sola con las últimas publicaciones</span></p>
+  </div>
+</section>
+
+<section class="reserva" id="reservar">
+  <div class="fondo lento" aria-hidden="true"><img src="media/17aef9172949.jpg" alt=""></div>
+  <div class="g sobre sube">
+    <p class="neon parpadeo" aria-hidden="true" data-i="cta_neon">¿Te esperamos?</p>
+    <h2 class="r" data-i="cta_h2">Tu hueco <span>te espera.</span></h2>
+    <p data-i="cta_p">Reserva en Booksy en un minuto: eliges servicio, día y hora, y te llega la confirmación al móvil.</p>
+    <div class="acciones">
+      <a class="btn grande" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_booksy">Reservar en Booksy</a>
+      <a class="btn acero grande" href="tel:+34936859204" data-i="llamar">Llamar · 936 85 92 04</a>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="g">
+    <div class="sube">
+      <p class="eti" style="color:var(--gris);margin-bottom:14px" data-i="vis_eti">Visítanos</p>
+      <h2 class="r">Plaça Maragall, 3<br>Sant Just Desvern</h2>
+      <div class="contacto">
+        <a class="btn acero" href="https://www.google.com/maps/search/?api=1&query=Lupi+Nails+Pla%C3%A7a+Maragall+3+Sant+Just+Desvern" target="_blank" rel="noopener" data-i="llegar">Cómo llegar</a>
+        <a class="btn acero" href="tel:+34936859204">936 85 92 04</a>
+        <a class="btn acero" href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener">@im.lupinails</a>
+      </div>
+    </div>
+    <div class="sube">
+      <table class="horas">
+        <tr><td data-i="h1">Lunes</td><td>9:30–17:00</td></tr>
+        <tr><td data-i="h2">Martes a viernes</td><td>9:30–19:00</td></tr>
+        <tr><td data-i="h3">Sábado</td><td>9:30–14:00</td></tr>
+        <tr><td data-i="h4">Domingo</td><td data-i="h5">Cerrado</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="firma-logo" role="img" aria-label="Lupi Nails · Sant Just"><use href="#logo-lupi"/></svg>
+  <div class="g">
+    <span>© 2026 Lupi Nails, S.L. · Plaça Maragall, 3 · 08960 Sant Just Desvern</span>
+    <span data-i="legal"><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+  </div>
+</footer>
+
+<a class="btn flota" id="flota" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i="reservar">Reservar</span></a>
+
+<script>
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ——— Elige tu color: al tocar un color, la mano de encima cambia a la foto de ese color ——— */
+const COLORES=[
+  ["Cereza","#9b1b30"],["Nude","#d9a892"],["Ballet","#f0c2c8"],["Cobre","#b8714c"],["Lavanda","#9d86c9"],["Oliva","#5d6a3a"],["Medianoche","#1f2340"],
+  ["Coral","#e2604f"],["Leche","#f4ece2"],["Burdeos","#5a1324"],["Trigo","#d8c48a"],["Eucalipto","#8fa595"],["Óxido","#a5452a"],["Negro","#151515"],
+  ["Lila","#c8b4dc"],["Rosa chicle","#ef7fa6"],["Arena","#c9ae8c"],["Pistacho","#b8cf8f"],["Azul hielo","#b9d4e6"],["Chocolate","#4b2c22"],["Rojo fuego","#c4151c"]
+];
+const UNAS=["media/3a494fa9be42.webp", "media/fadadf29b517.webp", "media/110a6a429ce7.webp", "media/38e5054ab0d3.webp", "media/272f8b01fcdc.webp", "media/e9d8392d1583.webp", "media/7c2e42d29799.webp", "media/179f6c467d7d.webp", "media/c6a3ac2a8c36.webp", "media/da8b558cd9d8.webp", "media/8b07541e5f4c.webp", "media/1bea85394695.webp", "media/7babf8b581f0.webp", "media/9776d9eff7d9.webp", "media/e5e351aec9d6.webp", "media/6b1c818559ad.webp", "media/48c585c315dd.webp", "media/95559655327e.webp", "media/74fa13446626.webp", "media/48d976d73680.webp", "media/6c5e8d67463a.webp"];
+(function(){
+  const cont=document.getElementById("muestras");
+  cont.innerHTML=COLORES.map(([n,c],i)=>`<button type="button" aria-pressed="${i===0}" aria-label="${n}" title="${n}" style="background:${c}"></button>`).join("");
+  const bs=[...cont.children],a=document.getElementById("mano-a"),b=document.getElementById("mano-b");
+  let delante=a,actual=-1;
+  function elegir(i){
+    if(i===actual)return;actual=i;
+    const [n]=COLORES[i],detras=delante===a?b:a;
+    detras.src=UNAS[i];detras.alt="Mano con las uñas pintadas en color "+n;
+    detras.style.opacity=1;delante.style.opacity=0;delante=detras;
+    document.getElementById("color-nombre").textContent=n;
+    document.getElementById("color-num").textContent="Nº "+String(i+1).padStart(2,"0");
+    bs.forEach((x,j)=>x.setAttribute("aria-pressed",j===i));
+  }
+  bs.forEach((x,i)=>{x.addEventListener("click",()=>elegir(i));x.addEventListener("focus",()=>elegir(i))});
+  elegir(0);
+  // precarga las demás fotos cuando la sección se acerca
+  new IntersectionObserver(([e],o)=>{if(e.isIntersecting){UNAS.forEach(u=>{const im=new Image();im.src=u});o.disconnect()}},{rootMargin:"600px"}).observe(cont);
+})();
+
+/* ——— Pestañas de servicios ——— */
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function verTab(t){
+  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;
+    const p=document.getElementById(x.getAttribute("aria-controls"));p.hidden=!on;if(on){p.classList.remove("entra");void p.offsetWidth;p.classList.add("entra")}});
+}
+tabs.forEach((t,i)=>{t.addEventListener("click",()=>verTab(t));
+  t.addEventListener("keydown",e=>{const d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(d){const n=tabs[(i+d+tabs.length)%tabs.length];verTab(n);n.focus()}})});
+
+/* ——— Reseñas ——— */
+const RES={
+  es:[["«Texto de una reseña real sobre el trato y el resultado.»","Nombre · mes 2026"],["«Reseña que hable de un diseño concreto de nail art.»","Nombre · mes 2026"],["«Reseña de una clienta de hace años que sigue viniendo.»","Nombre · mes 2026"]],
+  ca:[["«Text d'una ressenya real sobre el tracte i el resultat.»","Nom · mes 2026"],["«Ressenya que parli d'un disseny concret de nail art.»","Nom · mes 2026"],["«Ressenya d'una clienta de fa anys que continua venint.»","Nom · mes 2026"]],
+  en:[["“A real review about the service and the result.”","Name · month 2026"],["“A review about a specific nail art design.”","Name · month 2026"],["“A review from a long-time client who keeps coming back.”","Name · month 2026"]],
+  de:[["„Eine echte Bewertung über Service und Ergebnis.“","Name · Monat 2026"],["„Eine Bewertung über ein bestimmtes Nail-Art-Design.“","Name · Monat 2026"],["„Eine Bewertung einer langjährigen Stammkundin.“","Name · Monat 2026"]]
+};
+let lang="es",res=0;
+const puntos=[...document.querySelectorAll(".puntos button")];
+function verRes(i){
+  res=i;const [q,a]=RES[lang][i];
+  document.getElementById("cita").textContent=q;
+  document.getElementById("autora").innerHTML=a+' <span class="pend">'+({es:"ejemplo",ca:"exemple",en:"sample",de:"Beispiel"})[lang]+'</span>';
+  puntos.forEach((b,j)=>b.setAttribute("aria-pressed",j===i));
+}
+puntos.forEach((b,i)=>b.addEventListener("click",()=>verRes(i)));
+if(!reduce)setInterval(()=>verRes((res+1)%3),6500);
+
+/* ——— Idiomas. El castellano se lee del HTML; en producción cada idioma tendrá su URL con hreflang ——— */
+const T={
+ca:{title:"Lupi Nails · Saló d'ungles a Sant Just Desvern",n1:"Serveis",n2:"Colors",n3:"Opinions",n5:"Visita'ns",reservar:"Reservar",
+aviso:"Maqueta Mimmic · textos i preus provisionals",pista:"Mou el ratolí: els llums es gronxen",
+lema:"Passa, seu. <span>Les mans, de la nostra part.</span>",entrada_p:"Manicura, pedicura, nail art a mà alçada, pestanyes, celles i massatges a la Plaça Maragall de Sant Just. Amb calma, amb detall i amb el tracte de sempre.",
+reservar_booksy:"Reservar a Booksy",ver_serv:"Veure serveis ↓",
+tra_eti:"El tracte",tra_h:"Aquí no ets un torn. Et rebem pel teu nom, t'escoltem i ens prenem <em>el temps que calgui.</em>",
+p1t:"Sense presses",p1:"Cada cita té el seu temps reservat, perquè surtis exactament com volies.",p2t:"Fet a mà",p2:"Nail art a mà alçada, amb pinzell. Si ho portes en una foto, ho pintem.",p3t:"Cura i detall",p3:"De la cutícula a l'última brillantor, a cada cita. Per això tenim un 5,0 a Booksy.",
+cinta:"Manicura <i>·</i> Pedicura <i>·</i> Nail art <i>·</i> Semipermanent <i>·</i> Gel <i>·</i> Pestanyes <i>·</i> Celles <i>·</i> Massatges <i>·</i>",
+srv_eti:"Serveis",srv_h2:"El que fem <span>per tu.</span>",srv_p:"Preus de Booksy. Tria el servei, el dia i l'hora, i et arriba la confirmació al mòbil.",
+tb1:"Mans",tb2:"Peus",tb3:"Mirada",tb4:"Estètica i massatges",
+m1:"Semipermanent bàsica",m2:"Semipermanent Xpress",m3:"Xpress amb francesa",m4:"Ungles de gel i farciment",segun:"segons disseny",m5:"Nail art a mà alçada",m5s:"porta'ns una foto",pend:"pendent",
+pe1:"Pedicura",pe2:"Pedicura semipermanent",pe3:"ManiPedi semi bàsica",pe4:"ManiPedi semi complet",
+mi1:"Lifting i tint de pestanyes",mi2:"Disseny i depilació de celles",conf:"servei a confirmar",es1:"Massatge relaxant",es2:"Facial amb llum LED",es2s:"segons tractament",
+d1:"Semipermanent que aguanta, francesa neta i dissenys pintats a mà, sense adhesius.",d2:"En butaques de pell, amb aigua calenta i una hora només per a tu. També en pack amb manicura.",d3:"Pestanyes i celles per completar el look, a la mateixa visita que les ungles.",d4:"Una cabina a part, amb la llum baixa, per desconnectar de debò.",
+res_booksy:"Reservar a Booksy →",desde:"Serveis des de 6 € fins a 85 €. La llista completa i actualitzada és a Booksy.",
+col_eti:"Tria el teu color",col_h2:"Quin color <span>et ve de gust avui?</span>",col_p:"Toca un color i mira'l en una mà. Després, ensenya-li a l'Andrea quan reservis. <span class=\"pend\">colors reals de la seva carta</span>",reservar_color:"Reservar amb aquest color",
+op_eti:"Opinions",c_bk:"243 ressenyes a Booksy",c_gg:"71 ressenyes a Google",
+ig_h2:"L'últim, <span>acabat de pintar.</span>",ig_p:"Cada setmana pugem dissenys nous. Segueix-nos i arriba a la cita amb la idea clara.",ig_bio:"Manicura, pedicura i nail art a mà alçada · Sant Just",ig_fol:"seguidors",ig_seg:"Seguir a Instagram",ig_nota:"A la web final, aquesta secció s'actualitza sola amb les últimes publicacions",
+cta_neon:"T'esperem?",cta_h2:"El teu forat <span>t'espera.</span>",cta_p:"Reserva a Booksy en un minut: tries servei, dia i hora, i et arriba la confirmació al mòbil.",llamar:"Trucar · 936 85 92 04",
+vis_eti:"Visita'ns",llegar:"Com arribar-hi",legal:"<a href=\"#\">Avís legal</a> · <a href=\"#\">Privacitat</a> · <a href=\"#\">Galetes</a>"},
+en:{title:"Lupi Nails · Nail salon in Sant Just Desvern",n1:"Services",n2:"Colours",n3:"Reviews",n5:"Visit",reservar:"Book",
+aviso:"Mimmic mock-up · placeholder copy and prices",pista:"Move your mouse: the lamps swing",
+lema:"Come in, take a seat. <span>Your hands are in good hands.</span>",entrada_p:"Manicures, pedicures, freehand nail art, lashes, brows and massages on Plaça Maragall in Sant Just. Unhurried, detailed, and as friendly as ever.",
+reservar_booksy:"Book on Booksy",ver_serv:"See services ↓",
+tra_eti:"How we treat you",tra_h:"You're not just the next appointment. We greet you by name, we listen, and we take <em>all the time it needs.</em>",
+p1t:"No rush",p1:"Every appointment has its own time set aside, so you leave exactly as you wanted.",p2t:"Made by hand",p2:"Freehand nail art, painted with a brush. Bring us a photo and we'll paint it.",p3t:"Care and detail",p3:"From the cuticle to the final shine, every time. That's why we have a 5.0 on Booksy.",
+cinta:"Manicure <i>·</i> Pedicure <i>·</i> Nail art <i>·</i> Gel polish <i>·</i> Gel nails <i>·</i> Lashes <i>·</i> Brows <i>·</i> Massage <i>·</i>",
+srv_eti:"Services",srv_h2:"What we do <span>for you.</span>",srv_p:"Prices from Booksy. Pick the service, day and time, and the confirmation lands on your phone.",
+tb1:"Hands",tb2:"Feet",tb3:"Lashes & brows",tb4:"Beauty & massage",
+m1:"Basic gel polish",m2:"Express gel polish",m3:"Express gel, French tips",m4:"Gel nails and infill",segun:"depends on design",m5:"Freehand nail art",m5s:"bring us a photo",pend:"pending",
+pe1:"Pedicure",pe2:"Gel polish pedicure",pe3:"ManiPedi, basic gel",pe4:"ManiPedi, full gel",
+mi1:"Lash lift and tint",mi2:"Brow shaping and waxing",conf:"service to confirm",es1:"Relaxing massage",es2:"LED light facial",es2s:"depends on treatment",
+d1:"Gel polish that lasts, clean French tips and hand-painted designs, no stickers.",d2:"In leather armchairs, with warm water and an hour just for you. Also as a package with a manicure.",d3:"Lashes and brows to finish the look, in the same visit as your nails.",d4:"A separate room with low lighting, to truly switch off.",
+res_booksy:"Book on Booksy →",desde:"Services from €6 to €85. The full, up-to-date list is on Booksy.",
+col_eti:"Pick your colour",col_h2:"What colour <span>are you feeling today?</span>",col_p:"Tap a colour and see it on a hand. Then show Andrea when you book. <span class=\"pend\">real shades from her range</span>",reservar_color:"Book with this colour",
+op_eti:"Reviews",c_bk:"243 reviews on Booksy",c_gg:"71 reviews on Google",
+ig_h2:"Latest, <span>freshly painted.</span>",ig_p:"New designs every week. Follow us and arrive at your appointment knowing what you want.",ig_bio:"Manicures, pedicures and freehand nail art · Sant Just",ig_fol:"followers",ig_seg:"Follow on Instagram",ig_nota:"On the final site, this section updates itself with the latest posts",
+cta_neon:"Shall we expect you?",cta_h2:"Your slot <span>is waiting.</span>",cta_p:"Book on Booksy in a minute: pick a service, day and time, and the confirmation lands on your phone.",llamar:"Call · +34 936 85 92 04",
+vis_eti:"Visit us",llegar:"Get directions",legal:"<a href=\"#\">Legal notice</a> · <a href=\"#\">Privacy</a> · <a href=\"#\">Cookies</a>"},
+de:{title:"Lupi Nails · Nagelstudio in Sant Just Desvern",n1:"Leistungen",n2:"Farben",n3:"Bewertungen",n5:"Anfahrt",reservar:"Buchen",
+aviso:"Mimmic-Entwurf · Texte und Preise sind Platzhalter",pista:"Bewege die Maus: die Lampen schwingen",
+lema:"Komm rein, nimm Platz. <span>Deine Hände sind bei uns gut aufgehoben.</span>",entrada_p:"Maniküre, Pediküre, Freihand-Nail-Art, Wimpern, Brauen und Massagen an der Plaça Maragall in Sant Just. In Ruhe, mit Liebe zum Detail und herzlich wie immer.",
+reservar_booksy:"Bei Booksy buchen",ver_serv:"Leistungen ansehen ↓",
+tra_eti:"Unser Umgang",tra_h:"Hier bist du kein Termin unter vielen. Wir begrüßen dich mit Namen, hören zu und nehmen uns <em>so viel Zeit wie nötig.</em>",
+p1t:"Ohne Eile",p1:"Für jeden Termin ist genug Zeit eingeplant, damit du genau so rausgehst, wie du wolltest.",p2t:"Handgemacht",p2:"Freihand-Nail-Art mit dem Pinsel. Bring ein Foto mit, wir malen es.",p3t:"Sorgfalt im Detail",p3:"Von der Nagelhaut bis zum letzten Glanz, bei jedem Termin. Deshalb haben wir 5,0 auf Booksy.",
+cinta:"Maniküre <i>·</i> Pediküre <i>·</i> Nail Art <i>·</i> Gel-Lack <i>·</i> Gel <i>·</i> Wimpern <i>·</i> Brauen <i>·</i> Massagen <i>·</i>",
+srv_eti:"Leistungen",srv_h2:"Was wir <span>für dich tun.</span>",srv_p:"Preise von Booksy. Wähle Leistung, Tag und Uhrzeit, und die Bestätigung kommt aufs Handy.",
+tb1:"Hände",tb2:"Füße",tb3:"Wimpern & Brauen",tb4:"Kosmetik & Massage",
+m1:"Gel-Lack Basic",m2:"Gel-Lack Express",m3:"Gel-Lack Express, French",m4:"Gelnägel und Auffüllen",segun:"je nach Design",m5:"Freihand-Nail-Art",m5s:"bring ein Foto mit",pend:"offen",
+pe1:"Pediküre",pe2:"Pediküre mit Gel-Lack",pe3:"ManiPedi, Gel Basic",pe4:"ManiPedi, Gel komplett",
+mi1:"Wimpernlifting und Färben",mi2:"Augenbrauen formen und zupfen",conf:"Leistung noch offen",es1:"Entspannungsmassage",es2:"Gesichtsbehandlung mit LED-Licht",es2s:"je nach Behandlung",
+d1:"Gel-Lack, der hält, sauberes French und von Hand gemalte Designs, ohne Sticker.",d2:"In Ledersesseln, mit warmem Wasser und einer Stunde nur für dich. Auch als Paket mit Maniküre.",d3:"Wimpern und Brauen für den perfekten Look, beim selben Besuch wie deine Nägel.",d4:"Eine eigene Kabine mit gedämpftem Licht, um richtig abzuschalten.",
+res_booksy:"Bei Booksy buchen →",desde:"Leistungen von 6 € bis 85 €. Die vollständige, aktuelle Liste findest du auf Booksy.",
+col_eti:"Wähle deine Farbe",col_h2:"Welche Farbe <span>darf es heute sein?</span>",col_p:"Tippe auf eine Farbe und sieh sie an einer Hand. Zeig sie Andrea dann bei der Buchung. <span class=\"pend\">echte Farben aus ihrem Sortiment</span>",reservar_color:"Mit dieser Farbe buchen",
+op_eti:"Bewertungen",c_bk:"243 Bewertungen auf Booksy",c_gg:"71 Bewertungen auf Google",
+ig_h2:"Ganz neu, <span>frisch lackiert.</span>",ig_p:"Jede Woche neue Designs. Folge uns und komm mit einer klaren Idee zu deinem Termin.",ig_bio:"Maniküre, Pediküre und Freihand-Nail-Art · Sant Just",ig_fol:"Follower",ig_seg:"Auf Instagram folgen",ig_nota:"Auf der fertigen Website aktualisiert sich dieser Bereich automatisch mit den neuesten Beiträgen",
+cta_neon:"Bis bald?",cta_h2:"Dein Termin <span>wartet.</span>",cta_p:"In einer Minute bei Booksy buchen: Leistung, Tag und Uhrzeit wählen, und die Bestätigung kommt aufs Handy.",llamar:"Anrufen · +34 936 85 92 04",
+vis_eti:"Besuch uns",llegar:"Route planen",legal:"<a href=\"#\">Impressum</a> · <a href=\"#\">Datenschutz</a> · <a href=\"#\">Cookies</a>"}
+};
+const DIAS={ca:["Dilluns","Dimarts a divendres","Dissabte","Diumenge","Tancat"],en:["Monday","Tuesday to Friday","Saturday","Sunday","Closed"],de:["Montag","Dienstag bis Freitag","Samstag","Sonntag","Geschlossen"]};
+const nodos=[...document.querySelectorAll("[data-i]")];
+const horas=[...document.querySelectorAll(".horas [data-i]")];
+T.es={title:document.title};
+nodos.forEach(n=>{T.es[n.dataset.i]??=n.innerHTML});
+const DIAS_ES=horas.map(n=>n.innerHTML);
+function idioma(l){
+  if(!T[l])l="es";lang=l;
+  nodos.forEach(n=>{if(n.closest(".horas"))return;const v=T[l][n.dataset.i];if(v!==undefined)n.innerHTML=v});
+  horas.forEach((n,i)=>n.innerHTML=l==="es"?DIAS_ES[i]:DIAS[l][i]);
+  document.title=T[l].title;document.documentElement.lang=l;
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  verRes(res);partirDeclara();cinta();
+  try{localStorage.setItem("lupi-lang",l)}catch(e){}
+}
+
+/* ——— La frase del trato se enciende palabra a palabra con el scroll ——— */
+const declara=document.getElementById("declara");let palabras=[];
+function partirDeclara(){
+  const parte=(nodo)=>{[...nodo.childNodes].forEach(c=>{
+    if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t))f.append(t);else{const s=document.createElement("span");s.className="w";s.textContent=t;f.append(s)}});c.replaceWith(f)}
+    else parte(c)})};
+  parte(declara);palabras=[...declara.querySelectorAll(".w")];encender();
+}
+function encender(){
+  const r=declara.getBoundingClientRect(),p=reduce?1:Math.min(Math.max((innerHeight*.85-r.top)/(r.height+innerHeight*.35),0),1);
+  const n=Math.round(p*palabras.length);palabras.forEach((w,i)=>w.classList.toggle("on",i<n));
+}
+
+/* ——— Cinta: se duplica para que el bucle no tenga corte ——— */
+function cinta(){const c=document.getElementById("cinta"),s=c.firstElementChild;while(c.children.length>1)c.lastElementChild.remove();c.append(s.cloneNode(true))}
+
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>idioma(b.dataset.lang)));
+let inicial=new URLSearchParams(location.search).get("lang");
+if(!inicial){try{inicial=localStorage.getItem("lupi-lang")}catch(e){}}
+if(!inicial){const n=(navigator.language||"es").slice(0,2);inicial=T[n]?n:"es"}
+idioma(inicial);
+
+/* ——— Notas que cuentan al aparecer ——— */
+const ioN=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;ioN.unobserve(e.target);
+  const b=e.target,fin=+b.dataset.cuenta,t0=performance.now(),dec=lang==="en"?".":",";
+  (function paso(t){const k=reduce?1:Math.min((t-t0)/1400,1),v=(fin*(1-Math.pow(1-k,3))).toFixed(1).replace(".",dec);b.textContent=v;if(k<1)requestAnimationFrame(paso)})(t0)}),{threshold:.5});
+document.querySelectorAll("[data-cuenta]").forEach(b=>ioN.observe(b));
+
+/* ——— Aparición al hacer scroll, barra sólida y botón flotante ——— */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".sube").forEach(n=>io.observe(n));
+const barra=document.getElementById("barra"),entrada=document.getElementById("entrada"),flota=document.getElementById("flota"),reservaSec=document.getElementById("reservar");
+function alScroll(){
+  const pasada=scrollY>entrada.offsetHeight-80;barra.classList.toggle("solida",pasada);
+  const r=reservaSec.getBoundingClientRect();flota.classList.toggle("ver",pasada&&!(r.top<innerHeight&&r.bottom>0));
+  encender();
+}
+addEventListener("scroll",alScroll,{passive:true});addEventListener("resize",alScroll);alScroll();
+
+/* ——— Lámparas de espejo cobre en 3D (WebGL propio, trazado analítico, sin librerías) ———
+   Esferas de cobre con la boca abierta abajo y la bombilla encendida, colgadas de cables;
+   se reflejan entre ellas y en los tubos de ventilación del techo. El ratón las empuja y se balancean. */
+(function(){
+  const cv=document.getElementById("lamparas");
+  const gl=cv.getContext("webgl",{alpha:false,antialias:true});
+  if(!gl){document.documentElement.classList.add("sin-gl");return}
+  const NL=6;
+  const vs="attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}";
+  const fs=`precision highp float;
+uniform vec2 uR;uniform float uT;uniform vec4 uL[${NL}];
+const vec3 COBRE=vec3(.96,.62,.47);
+float hitSph(vec3 ro,vec3 rd,vec4 s){vec3 o=ro-s.xyz;float b=dot(o,rd),c=dot(o,o)-s.w*s.w,h=b*b-c;if(h<0.)return -1.;h=sqrt(h);float t=-b-h;return t>.001?t:-1.;}
+float hitTubo(vec3 ro,vec3 rd,vec3 c){vec2 o=ro.yz-c.xy,d=rd.yz;float a=dot(d,d),b=dot(o,d),k=dot(o,o)-c.z*c.z,h=b*b-a*k;if(h<0.)return -1.;float t=(-b-sqrt(h))/a;return t>.001?t:-1.;}
+vec3 entorno(vec3 d){
+  vec3 c=mix(vec3(.035,.03,.03),vec3(.012),smoothstep(-.1,.6,d.y));
+  c+=vec3(.20,.13,.09)*smoothstep(.2,-.7,d.y);
+  c+=vec3(1.,.93,.84)*smoothstep(.14,.0,abs(d.y-.02))*smoothstep(.1,.9,d.z)*1.6;
+  c+=vec3(.95,.9,.85)*smoothstep(.06,.0,abs(d.x-.55))*smoothstep(-.2,.3,d.y)*smoothstep(.5,.0,abs(d.y-.15))*.5*step(0.,d.z);
+  c+=vec3(1.,.82,.6)*pow(max(dot(d,normalize(vec3(-.5,.05,-.85))),0.),60.)*2.5;
+  c+=vec3(.55,.55,.58)*smoothstep(.08,.0,abs(d.y-.55))*.35;
+  return c;
+}
+float tubos(vec3 ro,vec3 rd,out vec3 n,out vec3 pos){
+  float tb=1e9;vec3 cs[2];cs[0]=vec3(2.3,-3.6,.24);cs[1]=vec3(2.7,-6.5,.22);
+  for(int i=0;i<2;i++){float t=hitTubo(ro,rd,cs[i]);if(t>0.&&t<tb){tb=t;pos=ro+rd*t;n=normalize(vec3(0.,pos.y-cs[i].x,pos.z-cs[i].y));}}
+  return tb;
+}
+vec3 sombreaTubo(vec3 p,vec3 n,vec3 rd){
+  float ang=atan(n.y,n.z);
+  float costura=smoothstep(.03,.0,abs(fract(p.x*1.1+ang*.32)-.5)-.44);
+  vec3 r=reflect(rd,n);
+  vec3 c=vec3(.42,.43,.45)*(.05+.3*max(-n.y,0.))+entorno(r)*.3;
+  return c*(1.-.35*costura);
+}
+vec3 trazaReflejo(vec3 ro,vec3 rd,int yo){
+  float tb=1e9;vec3 col=entorno(rd);
+  for(int i=0;i<${NL};i++){if(i==yo)continue;float t=hitSph(ro,rd,uL[i]);if(t>0.&&t<tb){tb=t;vec3 p=ro+rd*t,n=normalize(p-uL[i].xyz);
+    col=n.y<-.8?vec3(3.,2.6,2.):COBRE*entorno(reflect(rd,n))*.9;}}
+  vec3 n2,p2;float t2=tubos(ro,rd,n2,p2);if(t2<tb){col=sombreaTubo(p2,n2,rd);}
+  return col;
+}
+void main(){
+  vec2 uv=(gl_FragCoord.xy-.5*uR)/uR.y;
+  vec3 ro=vec3(0.,.15,6.),rd=normalize(vec3(uv,-2.15));
+  vec3 col=mix(vec3(.05,.035,.028),vec3(.008),smoothstep(-.45,.4,uv.y));
+  float tb=1e9;int yo=-1;vec3 n,p;
+  for(int i=0;i<${NL};i++){float t=hitSph(ro,rd,uL[i]);if(t>0.&&t<tb){tb=t;yo=i;}}
+  vec3 nt,pt;float tt=tubos(ro,rd,nt,pt);
+  if(tt<tb){col=sombreaTubo(pt,nt,rd);tb=tt;yo=-1;}
+  if(yo>=0){
+    vec4 s=uL[0];for(int i=0;i<${NL};i++)if(i==yo)s=uL[i];
+    p=ro+rd*tb;n=normalize(p-s.xyz);
+    if(n.y<-.8){float k=smoothstep(-.8,-1.,n.y);col=mix(vec3(1.4,1.05,.7),vec3(3.2,2.8,2.3),k);}
+    else{
+      vec3 r=reflect(rd,n);float fr=pow(1.-max(dot(n,-rd),0.),5.);
+      vec3 refl=trazaReflejo(p+n*.002,r,yo);
+      col=refl*mix(COBRE,vec3(1.),fr)*.95+COBRE*.03;
+      col+=vec3(1.,.9,.75)*smoothstep(-.6,-.8,n.y)*.35;
+    }
+  }
+  // cables: distancia del rayo a cada cable vertical
+  float px=2.2/uR.y;
+  for(int i=0;i<${NL};i++){
+    vec4 s=uL[i];vec3 a=vec3(s.x,s.y+s.w,s.z);
+    vec3 w=ro-a,u=rd,v=vec3(0.,1.,0.);float b=dot(u,v),d=dot(u,w),e=dot(v,w),den=1.-b*b;
+    float tc=(b*e-d)/den,sc=(e-b*d)/den;
+    if(tc>0.&&tc<tb&&sc>0.){float dist=length(w+u*tc-v*sc);float ancho=px*tc*.5;col=mix(col,vec3(.015),smoothstep(ancho+.006,.006,dist)*.95);}
+  }
+  // halo de cada bombilla
+  for(int i=0;i<${NL};i++){vec4 s=uL[i];vec3 b=s.xyz-vec3(0.,s.w*.9,0.);vec3 w=b-ro;float t=dot(w,rd);if(t>0.){float d=length(w-rd*t);col+=vec3(1.,.72,.42)*(.05/(d*d*12.+.04))*.09*step(t,tb+.6);}}
+  col=(col*(2.51*col+.03))/(col*(2.43*col+.59)+.14);
+  gl_FragColor=vec4(pow(clamp(col,0.,1.),vec3(1./2.2)),1.);
+}`;
+  function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))console.warn(gl.getShaderInfoLog(x));return x}
+  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
+  if(!gl.getProgramParameter(pr,gl.LINK_STATUS)){document.documentElement.classList.add("sin-gl");return}
+  gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  const ap=gl.getAttribLocation(pr,"p");gl.enableVertexAttribArray(ap);gl.vertexAttribPointer(ap,2,gl.FLOAT,false,0,0);
+  const uR=gl.getUniformLocation(pr,"uR"),uT=gl.getUniformLocation(pr,"uT"),uL=gl.getUniformLocation(pr,"uL");
+
+  // Cada lámpara: punto de anclaje en el techo, largo del cable, radio y péndulo (ángulo y velocidad)
+  const BASE=[[-.85,-1.5,3.3,.3],[-.55,.4,3.0,.26],[-.2,-3.0,3.1,.34],[.12,-.6,3.4,.28],[.45,-2.2,2.9,.32],[.8,.2,3.2,.27]];
+  const L=BASE.map((b,i)=>({fx:b[0],z:b[1],len:b[2],r:b[3],th:0,w:0,ph:i*1.7,x:0}));
+  const ANCLA=4.2;
+  const ESCALON=[.32,.12,.5,.03,.38,.2];
+  function colocar(){
+    const asp=cv.width/cv.height;
+    // Las bolas cuelgan por encima del rótulo de neón, con aire entre ambos: el largo del cable se calcula
+    // a partir de dónde queda el neón en pantalla, y cada lámpara para a una altura distinta.
+    const cr=cv.getBoundingClientRect(),nr=document.querySelector(".rotulo-neon").getBoundingClientRect();
+    const techoNeon=.5-(nr.top+nr.height*.12-cr.top)/cr.height,aire=asp<1?.05:.06;
+    const bajo=techoNeon+aire,alto=.5-84/cr.height,banda=Math.max(alto-bajo,.12);
+    L.forEach((l,i)=>{const prof=6-l.z,media=prof/2.15*.5*asp;l.x=l.fx*media*(asp<1?1.15:.92);
+      // radio en pantalla: como mucho un tercio de la franja libre, para que quepan escalonadas
+      const k=2.15/prof;l.rr=Math.min(l.r*(asp<1?.7:1),banda*.36/k);
+      const d=2*l.rr*k,uvB=bajo+Math.max(banda-d,0)*ESCALON[i],yB=.15+uvB/k;
+      l.len=Math.max(ANCLA-yB-l.rr,.6)});
+  }
+  function medir(){const dpr=Math.min(devicePixelRatio||1,2);cv.width=Math.round(cv.clientWidth*dpr);cv.height=Math.round(cv.clientHeight*dpr);gl.viewport(0,0,cv.width,cv.height);colocar()}
+  medir();addEventListener("resize",medir);if(document.fonts)document.fonts.ready.then(colocar);
+  let px=null,visible=true,ult=performance.now();
+  const ent=document.getElementById("entrada");
+  ent.addEventListener("pointermove",e=>{
+    const b=ent.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,vx=px===null?0:x-px;px=x;
+    L.forEach(l=>{const sx=.5+l.x/(((6-l.z)/2.15)*(cv.width/cv.height));const cerca=Math.exp(-Math.pow((sx-x)*5,2));l.w+=vx*cerca*9});
+  });
+  ent.addEventListener("pointerleave",()=>px=null);
+  addEventListener("scroll",()=>{const v=(scrollY-(alScroll.y||0));alScroll.y=scrollY;L.forEach((l,i)=>l.w+=v*.00012*(i%2?1:-1))},{passive:true});
+  new IntersectionObserver(([e])=>visible=e.isIntersecting).observe(ent);
+  const datos=new Float32Array(NL*4);
+  (function cuadro(ahora){
+    requestAnimationFrame(cuadro);
+    if(!visible)return;
+    const dt=Math.min((ahora-ult)/1000,.05);ult=ahora;const t=ahora/1000;
+    L.forEach((l,i)=>{
+      const meta=reduce?0:Math.sin(t*.55+l.ph)*.025;
+      const a=-(9.8/l.len)*(l.th-meta)-.9*l.w;l.w+=a*dt;l.th+=l.w*dt;
+      l.th=Math.max(-.6,Math.min(.6,l.th));
+      datos[i*4]=l.x+Math.sin(l.th)*l.len;datos[i*4+1]=ANCLA-Math.cos(l.th)*l.len;datos[i*4+2]=l.z;datos[i*4+3]=l.rr;
+    });
+    gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,t);gl.uniform4fv(uL,datos);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+  })(performance.now());
+})();
+</script>
+</body>
+</html>
