@@ -244,8 +244,8 @@ footer a{text-decoration:none}
 
 <header class="barra" id="barra">
   <div class="g">
-    <a class="marca" href="#entrada" aria-label="Lupi Nails, inicio"><svg><use href="#logo-corto"/></svg></a>
-    <nav aria-label="Secciones">
+    <a class="marca" href="#entrada" aria-label="Lupi Nails, inicio" data-ia="a_inicio"><svg><use href="#logo-corto"/></svg></a>
+    <nav aria-label="Secciones" data-ia="a_secc">
       <a href="#servicios" data-i="n1">Servicios</a>
       <a href="#color" data-i="n2">Colores</a>
       <a href="#opiniones" data-i="n3">Opiniones</a>
@@ -304,7 +304,7 @@ footer a{text-decoration:none}
       </div>
       <p data-i="srv_p">Precios de Booksy. Elige el servicio, el día y la hora, y te llega la confirmación al móvil.</p>
     </div>
-    <div class="pestanas" role="tablist" aria-label="Servicios">
+    <div class="pestanas" role="tablist" aria-label="Servicios" data-ia="a_serv">
       <button role="tab" aria-selected="true" aria-controls="pn1" id="tb1" data-i="tb1">Manos</button>
       <button role="tab" aria-selected="false" aria-controls="pn2" id="tb2" data-i="tb2">Pies</button>
       <button role="tab" aria-selected="false" aria-controls="pn3" id="tb3" data-i="tb3">Mirada</button>
@@ -355,7 +355,7 @@ footer a{text-decoration:none}
     <p class="intro" data-i="col_p">Toca un color y míralo en una mano. Después, enséñaselo a Andrea al reservar. <span class="pend">colores reales de su carta</span></p>
     <div class="mano"><img id="mano-a" alt=""><img id="mano-b" alt="" style="opacity:0"></div>
     <div class="elegido" aria-live="polite"><b id="color-nombre">Cereza</b><span id="color-num">Nº 01</span></div>
-    <div class="muestras" id="muestras" role="group" aria-label="Colores"></div>
+    <div class="muestras" id="muestras" role="group" aria-label="Colores" data-ia="a_col"></div>
     <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_color">Reservar con este color</a>
   </div>
 </section>
@@ -370,7 +370,7 @@ footer a{text-decoration:none}
     </div>
     <blockquote id="cita">«Texto de una reseña real sobre el trato y el resultado.»</blockquote>
     <cite id="autora">Nombre · mes 2026</cite>
-    <div class="puntos" role="group" aria-label="Reseñas"><button type="button" aria-pressed="true" aria-label="1"></button><button type="button" aria-pressed="false" aria-label="2"></button><button type="button" aria-pressed="false" aria-label="3"></button></div>
+    <div class="puntos" role="group" aria-label="Reseñas" data-ia="a_res"><button type="button" aria-pressed="true" aria-label="1"></button><button type="button" aria-pressed="false" aria-label="2"></button><button type="button" aria-pressed="false" aria-label="3"></button></div>
   </div>
 </section>
 
@@ -386,16 +386,16 @@ footer a{text-decoration:none}
     <div class="perfil sube">
       <div class="avatar"><svg><use href="#logo-corto"/></svg></div>
       <div class="quien"><b>@im.lupinails</b><span data-i="ig_bio">Manicura, pedicura y nail art a mano alzada · Sant Just</span></div>
-      <div class="cifra"><b>2.000+</b><span data-i="ig_fol">seguidores</span></div>
+      <div class="cifra"><b data-i="ig_num">2.000+</b><span data-i="ig_fol">seguidores</span></div>
       <a class="btn" href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener" data-i="ig_seg">Seguir en Instagram</a>
     </div>
     <div class="rejilla sube">
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/c30b33fac1e8.jpg" alt="Uñas de invierno con estrella roja y rayas" loading="lazy"></a>
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/de6b7e47aa10.jpg" alt="Uñas nude con purpurina" loading="lazy"></a>
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/7fb1195b140e.jpg" alt="Uñas rojas de Navidad con copo de nieve" loading="lazy"></a>
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/ab1417fa9314.jpg" alt="Nail art pintado a mano con pincel" loading="lazy"></a>
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/eae301f5873d.jpg" alt="Uñas babyboomer con la tarjeta I'm Lupi Nails" loading="lazy"></a>
-      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/41b4e1a5b273.jpg" alt="El salón decorado para Halloween" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/c30b33fac1e8.jpg" alt="Uñas de invierno con estrella roja y rayas" data-ialt="ig1" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/de6b7e47aa10.jpg" alt="Uñas nude con purpurina" data-ialt="ig2" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/7fb1195b140e.jpg" alt="Uñas rojas de Navidad con copo de nieve" data-ialt="ig3" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/ab1417fa9314.jpg" alt="Nail art pintado a mano con pincel" data-ialt="ig4" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/eae301f5873d.jpg" alt="Uñas babyboomer con la tarjeta I'm Lupi Nails" data-ialt="ig5" loading="lazy"></a>
+      <a href="https://www.instagram.com/im.lupinails/" target="_blank" rel="noopener"><img src="media/41b4e1a5b273.jpg" alt="El salón decorado para Halloween" data-ialt="ig6" loading="lazy"></a>
     </div>
     <p class="nota"><span class="pend" data-i="ig_nota">En la web final, esta sección se actualiza sola con las últimas publicaciones</span></p>
   </div>
@@ -449,6 +449,7 @@ footer a{text-decoration:none}
 
 <script>
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lang="es";
 
 /* ——— Elige tu color: al tocar un color, la mano de encima cambia a la foto de ese color ——— */
 const COLORES=[
@@ -457,6 +458,14 @@ const COLORES=[
   ["Lila","#c8b4dc"],["Rosa chicle","#ef7fa6"],["Arena","#c9ae8c"],["Pistacho","#b8cf8f"],["Azul hielo","#b9d4e6"],["Chocolate","#4b2c22"],["Rojo fuego","#c4151c"]
 ];
 const UNAS=["media/3a494fa9be42.webp", "media/fadadf29b517.webp", "media/110a6a429ce7.webp", "media/38e5054ab0d3.webp", "media/272f8b01fcdc.webp", "media/e9d8392d1583.webp", "media/7c2e42d29799.webp", "media/179f6c467d7d.webp", "media/c6a3ac2a8c36.webp", "media/da8b558cd9d8.webp", "media/8b07541e5f4c.webp", "media/1bea85394695.webp", "media/7babf8b581f0.webp", "media/9776d9eff7d9.webp", "media/e5e351aec9d6.webp", "media/6b1c818559ad.webp", "media/48c585c315dd.webp", "media/95559655327e.webp", "media/74fa13446626.webp", "media/48d976d73680.webp", "media/6c5e8d67463a.webp"];
+const COL_T={
+ca:["Cirera","Nude","Ballet","Coure","Lavanda","Oliva","Mitjanit","Coral","Llet","Bordeus","Blat","Eucaliptus","Òxid","Negre","Lila","Rosa xiclet","Sorra","Festuc","Blau gel","Xocolata","Vermell foc"],
+en:["Cherry","Nude","Ballet","Copper","Lavender","Olive","Midnight","Coral","Milk","Burgundy","Wheat","Eucalyptus","Rust","Black","Lilac","Bubblegum","Sand","Pistachio","Ice blue","Chocolate","Fire red"],
+de:["Kirsche","Nude","Ballett","Kupfer","Lavendel","Oliv","Mitternacht","Koralle","Milch","Bordeaux","Weizen","Eukalyptus","Rost","Schwarz","Flieder","Kaugummirosa","Sand","Pistazie","Eisblau","Schokolade","Feuerrot"]};
+const COL_NUM={es:"Nº",ca:"Núm.",en:"No.",de:"Nr."};
+const COL_ALT={es:"Mano con las uñas pintadas en color ",ca:"Mà amb les ungles pintades de color ",en:"Hand with nails painted in ",de:"Hand mit Nägeln in der Farbe "};
+const nomCol=i=>(COL_T[lang]||[])[i]||COLORES[i][0];
+let rotularColores=()=>{};
 (function(){
   const cont=document.getElementById("muestras");
   cont.innerHTML=COLORES.map(([n,c],i)=>`<button type="button" aria-pressed="${i===0}" aria-label="${n}" title="${n}" style="background:${c}"></button>`).join("");
@@ -464,13 +473,21 @@ const UNAS=["media/3a494fa9be42.webp", "media/fadadf29b517.webp", "media/110a6a4
   let delante=a,actual=-1;
   function elegir(i){
     if(i===actual)return;actual=i;
-    const [n]=COLORES[i],detras=delante===a?b:a;
-    detras.src=UNAS[i];detras.alt="Mano con las uñas pintadas en color "+n;
-    detras.style.opacity=1;delante.style.opacity=0;delante=detras;
-    document.getElementById("color-nombre").textContent=n;
-    document.getElementById("color-num").textContent="Nº "+String(i+1).padStart(2,"0");
+    const detras=delante===a?b:a;
+    detras.src=UNAS[i];
+    detras.style.opacity=1;delante.style.opacity=0;delante.alt="";delante=detras;
     bs.forEach((x,j)=>x.setAttribute("aria-pressed",j===i));
+    rotular();
   }
+  // nombres, número y texto alternativo en el idioma activo
+  function rotular(){
+    bs.forEach((x,j)=>{const n=nomCol(j);x.setAttribute("aria-label",n);x.title=n});
+    if(actual<0)return;const n=nomCol(actual);
+    delante.alt=COL_ALT[lang]+n;
+    document.getElementById("color-nombre").textContent=n;
+    document.getElementById("color-num").textContent=COL_NUM[lang]+" "+String(actual+1).padStart(2,"0");
+  }
+  rotularColores=rotular;
   bs.forEach((x,i)=>{x.addEventListener("click",()=>elegir(i));x.addEventListener("focus",()=>elegir(i))});
   elegir(0);
   // precarga las demás fotos cuando la sección se acerca
@@ -493,7 +510,7 @@ const RES={
   en:[["“A real review about the service and the result.”","Name · month 2026"],["“A review about a specific nail art design.”","Name · month 2026"],["“A review from a long-time client who keeps coming back.”","Name · month 2026"]],
   de:[["„Eine echte Bewertung über Service und Ergebnis.“","Name · Monat 2026"],["„Eine Bewertung über ein bestimmtes Nail-Art-Design.“","Name · Monat 2026"],["„Eine Bewertung einer langjährigen Stammkundin.“","Name · Monat 2026"]]
 };
-let lang="es",res=0;
+let res=0;
 const puntos=[...document.querySelectorAll(".puntos button")];
 function verRes(i){
   res=i;const [q,a]=RES[lang][i];
@@ -506,14 +523,15 @@ if(!reduce)setInterval(()=>verRes((res+1)%3),6500);
 
 /* ——— Idiomas. El castellano se lee del HTML; en producción cada idioma tendrá su URL con hreflang ——— */
 const T={
-ca:{title:"Lupi Nails · Saló d'ungles a Sant Just Desvern",n1:"Serveis",n2:"Colors",n3:"Opinions",n5:"Visita'ns",reservar:"Reservar",
+ca:{title:"Lupi Nails · Saló d'ungles a Sant Just Desvern",desc:"Manicura, pedicura, nail art a mà alçada, pestanyes, celles i massatges a la Plaça Maragall de Sant Just Desvern. Reserva a Booksy.",a_inicio:"Lupi Nails, inici",a_secc:"Seccions",a_serv:"Serveis",a_col:"Colors",a_res:"Ressenyes",ig_num:"2.000+",ig1:"Ungles d'hivern amb estrella vermella i ratlles",ig2:"Ungles nude amb purpurina",ig3:"Ungles vermelles de Nadal amb floc de neu",ig4:"Nail art pintat a mà amb pinzell",ig5:"Ungles babyboomer amb la targeta I'm Lupi Nails",ig6:"El saló decorat per Halloween",
+n1:"Serveis",n2:"Colors",n3:"Opinions",n5:"Visita'ns",reservar:"Reservar",
 aviso:"Maqueta Mimmic · textos i preus provisionals",pista:"Mou el ratolí: els llums es gronxen",
 lema:"Passa, seu. <span>Les mans, de la nostra part.</span>",entrada_p:"Manicura, pedicura, nail art a mà alçada, pestanyes, celles i massatges a la Plaça Maragall de Sant Just. Amb calma, amb detall i amb el tracte de sempre.",
 reservar_booksy:"Reservar a Booksy",ver_serv:"Veure serveis ↓",
 tra_eti:"El tracte",tra_h:"Aquí no ets un torn. Et rebem pel teu nom, t'escoltem i ens prenem <em>el temps que calgui.</em>",
 p1t:"Sense presses",p1:"Cada cita té el seu temps reservat, perquè surtis exactament com volies.",p2t:"Fet a mà",p2:"Nail art a mà alçada, amb pinzell. Si ho portes en una foto, ho pintem.",p3t:"Cura i detall",p3:"De la cutícula a l'última brillantor, a cada cita. Per això tenim un 5,0 a Booksy.",
 cinta:"Manicura <i>·</i> Pedicura <i>·</i> Nail art <i>·</i> Semipermanent <i>·</i> Gel <i>·</i> Pestanyes <i>·</i> Celles <i>·</i> Massatges <i>·</i>",
-srv_eti:"Serveis",srv_h2:"El que fem <span>per tu.</span>",srv_p:"Preus de Booksy. Tria el servei, el dia i l'hora, i et arriba la confirmació al mòbil.",
+srv_eti:"Serveis",srv_h2:"El que fem <span>per tu.</span>",srv_p:"Preus de Booksy. Tria el servei, el dia i l'hora, i t'arriba la confirmació al mòbil.",
 tb1:"Mans",tb2:"Peus",tb3:"Mirada",tb4:"Estètica i massatges",
 m1:"Semipermanent bàsica",m2:"Semipermanent Xpress",m3:"Xpress amb francesa",m4:"Ungles de gel i farciment",segun:"segons disseny",m5:"Nail art a mà alçada",m5s:"porta'ns una foto",pend:"pendent",
 pe1:"Pedicura",pe2:"Pedicura semipermanent",pe3:"ManiPedi semi bàsica",pe4:"ManiPedi semi complet",
@@ -523,9 +541,10 @@ res_booksy:"Reservar a Booksy →",desde:"Serveis des de 6 € fins a 85 €. La
 col_eti:"Tria el teu color",col_h2:"Quin color <span>et ve de gust avui?</span>",col_p:"Toca un color i mira'l en una mà. Després, ensenya-li a l'Andrea quan reservis. <span class=\"pend\">colors reals de la seva carta</span>",reservar_color:"Reservar amb aquest color",
 op_eti:"Opinions",c_bk:"243 ressenyes a Booksy",c_gg:"71 ressenyes a Google",
 ig_h2:"L'últim, <span>acabat de pintar.</span>",ig_p:"Cada setmana pugem dissenys nous. Segueix-nos i arriba a la cita amb la idea clara.",ig_bio:"Manicura, pedicura i nail art a mà alçada · Sant Just",ig_fol:"seguidors",ig_seg:"Seguir a Instagram",ig_nota:"A la web final, aquesta secció s'actualitza sola amb les últimes publicacions",
-cta_neon:"T'esperem?",cta_h2:"El teu forat <span>t'espera.</span>",cta_p:"Reserva a Booksy en un minut: tries servei, dia i hora, i et arriba la confirmació al mòbil.",llamar:"Trucar · 936 85 92 04",
+cta_neon:"T'esperem?",cta_h2:"La teva hora <span>t'espera.</span>",cta_p:"Reserva a Booksy en un minut: tries servei, dia i hora, i t'arriba la confirmació al mòbil.",llamar:"Trucar · 936 85 92 04",
 vis_eti:"Visita'ns",llegar:"Com arribar-hi",legal:"<a href=\"#\">Avís legal</a> · <a href=\"#\">Privacitat</a> · <a href=\"#\">Galetes</a>"},
-en:{title:"Lupi Nails · Nail salon in Sant Just Desvern",n1:"Services",n2:"Colours",n3:"Reviews",n5:"Visit",reservar:"Book",
+en:{title:"Lupi Nails · Nail salon in Sant Just Desvern",desc:"Manicures, pedicures, freehand nail art, lashes, brows and massages on Plaça Maragall in Sant Just Desvern. Book on Booksy.",a_inicio:"Lupi Nails, home",a_secc:"Sections",a_serv:"Services",a_col:"Colours",a_res:"Reviews",ig_num:"2,000+",ig1:"Winter nails with a red star and stripes",ig2:"Nude nails with glitter",ig3:"Red Christmas nails with a snowflake",ig4:"Nail art hand-painted with a brush",ig5:"Babyboomer nails holding the I'm Lupi Nails card",ig6:"The salon decorated for Halloween",
+n1:"Services",n2:"Colours",n3:"Reviews",n5:"Visit",reservar:"Book",
 aviso:"Mimmic mock-up · placeholder copy and prices",pista:"Move your mouse: the lamps swing",
 lema:"Come in, take a seat. <span>Your hands are in good hands.</span>",entrada_p:"Manicures, pedicures, freehand nail art, lashes, brows and massages on Plaça Maragall in Sant Just. Unhurried, detailed, and as friendly as ever.",
 reservar_booksy:"Book on Booksy",ver_serv:"See services ↓",
@@ -538,13 +557,14 @@ m1:"Basic gel polish",m2:"Express gel polish",m3:"Express gel, French tips",m4:"
 pe1:"Pedicure",pe2:"Gel polish pedicure",pe3:"ManiPedi, basic gel",pe4:"ManiPedi, full gel",
 mi1:"Lash lift and tint",mi2:"Brow shaping and waxing",conf:"service to confirm",es1:"Relaxing massage",es2:"LED light facial",es2s:"depends on treatment",
 d1:"Gel polish that lasts, clean French tips and hand-painted designs, no stickers.",d2:"In leather armchairs, with warm water and an hour just for you. Also as a package with a manicure.",d3:"Lashes and brows to finish the look, in the same visit as your nails.",d4:"A separate room with low lighting, to truly switch off.",
-res_booksy:"Book on Booksy →",desde:"Services from €6 to €85. The full, up-to-date list is on Booksy.",
+res_booksy:"Book on Booksy →",desde:"Services from €6 to €85. The full, up-to-date list is on Booksy (in Spanish).",
 col_eti:"Pick your colour",col_h2:"What colour <span>are you feeling today?</span>",col_p:"Tap a colour and see it on a hand. Then show Andrea when you book. <span class=\"pend\">real shades from her range</span>",reservar_color:"Book with this colour",
 op_eti:"Reviews",c_bk:"243 reviews on Booksy",c_gg:"71 reviews on Google",
 ig_h2:"Latest, <span>freshly painted.</span>",ig_p:"New designs every week. Follow us and arrive at your appointment knowing what you want.",ig_bio:"Manicures, pedicures and freehand nail art · Sant Just",ig_fol:"followers",ig_seg:"Follow on Instagram",ig_nota:"On the final site, this section updates itself with the latest posts",
 cta_neon:"Shall we expect you?",cta_h2:"Your slot <span>is waiting.</span>",cta_p:"Book on Booksy in a minute: pick a service, day and time, and the confirmation lands on your phone.",llamar:"Call · +34 936 85 92 04",
 vis_eti:"Visit us",llegar:"Get directions",legal:"<a href=\"#\">Legal notice</a> · <a href=\"#\">Privacy</a> · <a href=\"#\">Cookies</a>"},
-de:{title:"Lupi Nails · Nagelstudio in Sant Just Desvern",n1:"Leistungen",n2:"Farben",n3:"Bewertungen",n5:"Anfahrt",reservar:"Buchen",
+de:{title:"Lupi Nails · Nagelstudio in Sant Just Desvern",desc:"Maniküre, Pediküre, Freihand-Nail-Art, Wimpern, Brauen und Massagen an der Plaça Maragall in Sant Just Desvern. Termin bei Booksy buchen.",a_inicio:"Lupi Nails, Startseite",a_secc:"Bereiche",a_serv:"Leistungen",a_col:"Farben",a_res:"Bewertungen",ig_num:"2.000+",ig1:"Winternägel mit rotem Stern und Streifen",ig2:"Nude-Nägel mit Glitzer",ig3:"Rote Weihnachtsnägel mit Schneeflocke",ig4:"Mit dem Pinsel handgemalte Nail Art",ig5:"Babyboomer-Nägel mit der Karte I'm Lupi Nails",ig6:"Der Salon in Halloween-Deko",
+n1:"Leistungen",n2:"Farben",n3:"Bewertungen",n5:"Anfahrt",reservar:"Buchen",
 aviso:"Mimmic-Entwurf · Texte und Preise sind Platzhalter",pista:"Bewege die Maus: die Lampen schwingen",
 lema:"Komm rein, nimm Platz. <span>Deine Hände sind bei uns gut aufgehoben.</span>",entrada_p:"Maniküre, Pediküre, Freihand-Nail-Art, Wimpern, Brauen und Massagen an der Plaça Maragall in Sant Just. In Ruhe, mit Liebe zum Detail und herzlich wie immer.",
 reservar_booksy:"Bei Booksy buchen",ver_serv:"Leistungen ansehen ↓",
@@ -557,7 +577,7 @@ m1:"Gel-Lack Basic",m2:"Gel-Lack Express",m3:"Gel-Lack Express, French",m4:"Geln
 pe1:"Pediküre",pe2:"Pediküre mit Gel-Lack",pe3:"ManiPedi, Gel Basic",pe4:"ManiPedi, Gel komplett",
 mi1:"Wimpernlifting und Färben",mi2:"Augenbrauen formen und zupfen",conf:"Leistung noch offen",es1:"Entspannungsmassage",es2:"Gesichtsbehandlung mit LED-Licht",es2s:"je nach Behandlung",
 d1:"Gel-Lack, der hält, sauberes French und von Hand gemalte Designs, ohne Sticker.",d2:"In Ledersesseln, mit warmem Wasser und einer Stunde nur für dich. Auch als Paket mit Maniküre.",d3:"Wimpern und Brauen für den perfekten Look, beim selben Besuch wie deine Nägel.",d4:"Eine eigene Kabine mit gedämpftem Licht, um richtig abzuschalten.",
-res_booksy:"Bei Booksy buchen →",desde:"Leistungen von 6 € bis 85 €. Die vollständige, aktuelle Liste findest du auf Booksy.",
+res_booksy:"Bei Booksy buchen →",desde:"Leistungen von 6 € bis 85 €. Die vollständige, aktuelle Liste findest du auf Booksy (auf Spanisch).",
 col_eti:"Wähle deine Farbe",col_h2:"Welche Farbe <span>darf es heute sein?</span>",col_p:"Tippe auf eine Farbe und sieh sie an einer Hand. Zeig sie Andrea dann bei der Buchung. <span class=\"pend\">echte Farben aus ihrem Sortiment</span>",reservar_color:"Mit dieser Farbe buchen",
 op_eti:"Bewertungen",c_bk:"243 Bewertungen auf Booksy",c_gg:"71 Bewertungen auf Google",
 ig_h2:"Ganz neu, <span>frisch lackiert.</span>",ig_p:"Jede Woche neue Designs. Folge uns und komm mit einer klaren Idee zu deinem Termin.",ig_bio:"Maniküre, Pediküre und Freihand-Nail-Art · Sant Just",ig_fol:"Follower",ig_seg:"Auf Instagram folgen",ig_nota:"Auf der fertigen Website aktualisiert sich dieser Bereich automatisch mit den neuesten Beiträgen",
@@ -567,14 +587,19 @@ vis_eti:"Besuch uns",llegar:"Route planen",legal:"<a href=\"#\">Impressum</a> ·
 const DIAS={ca:["Dilluns","Dimarts a divendres","Dissabte","Diumenge","Tancat"],en:["Monday","Tuesday to Friday","Saturday","Sunday","Closed"],de:["Montag","Dienstag bis Freitag","Samstag","Sonntag","Geschlossen"]};
 const nodos=[...document.querySelectorAll("[data-i]")];
 const horas=[...document.querySelectorAll(".horas [data-i]")];
-T.es={title:document.title};
+const descMeta=document.querySelector('meta[name="description"]');
+T.es={title:document.title,desc:descMeta.content};
 nodos.forEach(n=>{T.es[n.dataset.i]??=n.innerHTML});
+document.querySelectorAll("[data-ia]").forEach(n=>{T.es[n.dataset.ia]??=n.getAttribute("aria-label")});
+document.querySelectorAll("[data-ialt]").forEach(n=>{T.es[n.dataset.ialt]??=n.alt});
 const DIAS_ES=horas.map(n=>n.innerHTML);
 function idioma(l){
   if(!T[l])l="es";lang=l;
   nodos.forEach(n=>{if(n.closest(".horas"))return;const v=T[l][n.dataset.i];if(v!==undefined)n.innerHTML=v});
   horas.forEach((n,i)=>n.innerHTML=l==="es"?DIAS_ES[i]:DIAS[l][i]);
-  document.title=T[l].title;document.documentElement.lang=l;
+  document.querySelectorAll("[data-ia]").forEach(n=>{const v=T[l][n.dataset.ia];if(v)n.setAttribute("aria-label",v)});
+  document.querySelectorAll("[data-ialt]").forEach(n=>{const v=T[l][n.dataset.ialt];if(v)n.alt=v});
+  document.title=T[l].title;descMeta.content=T[l].desc;document.documentElement.lang=l;rotularColores();
   document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
   verRes(res);partirDeclara();cinta();
   try{localStorage.setItem("lupi-lang",l)}catch(e){}
