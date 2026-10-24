@@ -129,21 +129,23 @@ h2.r span{color:var(--cobre)}
 @media (max-width:900px){.panel{grid-template-columns:1fr;gap:30px}.servicios{padding:96px 0}.pestanas{flex-wrap:nowrap;overflow-x:auto;margin-inline:-24px;padding-inline:24px;scrollbar-width:none}.pestanas button{white-space:nowrap}}
 
 /* Elige tu color: textos, debajo la mano sin fondo y debajo los 21 colores en pequeño */
-.color{padding:130px 0 120px;background:var(--cal-2);text-align:center;overflow:hidden}
-.color .g{display:flex;flex-direction:column;align-items:center}
-.color p.intro{color:var(--gris);max-width:40ch;margin:22px auto 0}
-.mano{position:relative;width:min(300px,62vw);aspect-ratio:520/785;margin:26px auto 0;filter:drop-shadow(0 18px 14px rgba(60,30,15,.16))}
+.color{padding:130px 0 120px;background:var(--cal-2);overflow:hidden}
+.color .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:64px;align-items:start}
+.cab-col{grid-column:1;grid-row:1}
+.color p.intro{color:var(--gris);max-width:40ch;margin:22px 0 0}
+.der{grid-column:2;grid-row:1/4;align-self:center;display:flex;flex-direction:column;align-items:center}
+.mano{position:relative;width:min(360px,100%);aspect-ratio:520/785;filter:drop-shadow(0 18px 14px rgba(60,30,15,.16))}
 .mano img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .45s;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
 .elegido{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-top:6px}
 .elegido b{font:800 2rem/1 var(--rotulo);text-transform:uppercase}
 .elegido span{color:var(--gris);font-size:.9rem}
-.muestras{display:grid;grid-template-columns:repeat(21,28px);gap:10px;justify-content:center;margin-top:26px}
-.muestras button{all:unset;cursor:pointer;width:28px;aspect-ratio:1;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.18),inset 0 3px 5px rgba(255,255,255,.35),0 3px 6px -3px rgba(0,0,0,.35);transition:transform .25s,box-shadow .25s}
-.muestras button:hover{transform:scale(1.15)}
-.muestras button[aria-pressed="true"]{transform:scale(1.15);box-shadow:0 0 0 2px var(--cal-2),0 0 0 3.5px var(--tinta)}
+.muestras{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(3,44px);gap:16px 18px;justify-content:start;margin-top:36px}
+.muestras button{all:unset;cursor:pointer;width:44px;aspect-ratio:1;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.18),inset 0 3px 5px rgba(255,255,255,.35),0 3px 6px -3px rgba(0,0,0,.35);transition:transform .25s,box-shadow .25s}
+.muestras button:hover{transform:scale(1.1)}
+.muestras button[aria-pressed="true"]{transform:scale(1.1);box-shadow:0 0 0 2px var(--cal-2),0 0 0 3.5px var(--tinta)}
 .muestras button:focus-visible{outline:2px solid var(--cobre);outline-offset:5px}
-.color .btn{margin-top:36px}
-@media (max-width:900px){.color{padding:96px 0 90px}.muestras{grid-template-columns:repeat(11,minmax(0,26px));gap:9px 8px}.muestras button{width:100%}}
+.color .btn{grid-column:1;grid-row:3;justify-self:start;align-self:start;margin-top:36px}
+@media (max-width:900px){.color{padding:96px 0 90px}.color .g{grid-template-columns:auto minmax(0,1fr);column-gap:18px}.cab-col{grid-column:1/-1}.der{grid-row:2}.muestras{grid-template-columns:repeat(3,38px);gap:12px 12px;margin-top:30px;align-self:center}.muestras button{width:38px}.elegido{flex-direction:column;align-items:center;gap:4px}.elegido b{font-size:1.5rem}.color .btn{grid-column:1/-1;justify-self:center}}
 
 /* Opiniones: el salón de fondo, en movimiento lento */
 .opiniones{padding:140px 0;background:var(--techo);color:var(--cal);text-align:center;overflow:hidden}
@@ -246,10 +248,10 @@ footer a{text-decoration:none}
   <div class="g">
     <a class="marca" href="#entrada" aria-label="Lupi Nails, inicio" data-ia="a_inicio"><svg><use href="#logo-corto"/></svg></a>
     <nav aria-label="Secciones" data-ia="a_secc">
-      <a href="#servicios" data-i="n1">Servicios</a>
       <a href="#color" data-i="n2">Colores</a>
-      <a href="#opiniones" data-i="n3">Opiniones</a>
+      <a href="#servicios" data-i="n1">Servicios</a>
       <a href="#instagram">Instagram</a>
+      <a href="#opiniones" data-i="n3">Opiniones</a>
       <a href="#visita" data-i="n5">Visítanos</a>
     </nav>
     <div class="idiomas" role="group" aria-label="Idioma / Language / Sprache">
@@ -293,6 +295,22 @@ footer a{text-decoration:none}
 </section>
 
 <div class="cinta" aria-hidden="true"><div id="cinta"><span data-i="cinta">Manicura <i>·</i> Pedicura <i>·</i> Nail art <i>·</i> Semipermanente <i>·</i> Gel <i>·</i> Pestañas <i>·</i> Cejas <i>·</i> Masajes <i>·</i></span></div></div>
+
+<section class="color" id="color">
+  <div class="g sube">
+    <div class="cab-col">
+      <p class="eti" style="color:var(--cobre)" data-i="col_eti">Elige tu color</p>
+      <h2 class="r" data-i="col_h2">¿Qué color <span>te apetece hoy?</span></h2>
+      <p class="intro" data-i="col_p">Toca un color y míralo en una mano. Después, enséñaselo a Andrea al reservar. <span class="pend">colores reales de su carta</span></p>
+    </div>
+    <div class="muestras" id="muestras" role="group" aria-label="Colores" data-ia="a_col"></div>
+    <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_color">Reservar con este color</a>
+    <div class="der">
+      <div class="mano"><img id="mano-a" alt=""><img id="mano-b" alt="" style="opacity:0"></div>
+      <div class="elegido" aria-live="polite"><b id="color-nombre">Cereza</b><span id="color-num">Nº 01</span></div>
+    </div>
+  </div>
+</section>
 
 <section class="servicios oscuro" id="servicios">
   <div class="fondo" aria-hidden="true"><img src="media/2020111602f1.jpg" alt=""></div>
@@ -348,32 +366,6 @@ footer a{text-decoration:none}
   </div>
 </section>
 
-<section class="color" id="color">
-  <div class="g sube">
-    <p class="eti" style="color:var(--cobre)" data-i="col_eti">Elige tu color</p>
-    <h2 class="r" data-i="col_h2">¿Qué color <span>te apetece hoy?</span></h2>
-    <p class="intro" data-i="col_p">Toca un color y míralo en una mano. Después, enséñaselo a Andrea al reservar. <span class="pend">colores reales de su carta</span></p>
-    <div class="mano"><img id="mano-a" alt=""><img id="mano-b" alt="" style="opacity:0"></div>
-    <div class="elegido" aria-live="polite"><b id="color-nombre">Cereza</b><span id="color-num">Nº 01</span></div>
-    <div class="muestras" id="muestras" role="group" aria-label="Colores" data-ia="a_col"></div>
-    <a class="btn" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_color">Reservar con este color</a>
-  </div>
-</section>
-
-<section class="opiniones" id="opiniones">
-  <div class="fondo lento" aria-hidden="true"><img src="media/7e269071d86f.jpg" alt=""></div>
-  <div class="g sobre">
-    <p class="eti" style="color:rgba(241,238,233,.55)" data-i="op_eti">Opiniones</p>
-    <div class="notas">
-      <div><b data-cuenta="5.0">5,0</b><div class="estrellas">★★★★★</div><span data-i="c_bk">243 reseñas en Booksy</span></div>
-      <div><b data-cuenta="4.7">4,7</b><div class="estrellas">★★★★★</div><span data-i="c_gg">71 reseñas en Google</span></div>
-    </div>
-    <blockquote id="cita">«Texto de una reseña real sobre el trato y el resultado.»</blockquote>
-    <cite id="autora">Nombre · mes 2026</cite>
-    <div class="puntos" role="group" aria-label="Reseñas" data-ia="a_res"><button type="button" aria-pressed="true" aria-label="1"></button><button type="button" aria-pressed="false" aria-label="2"></button><button type="button" aria-pressed="false" aria-label="3"></button></div>
-  </div>
-</section>
-
 <section class="insta" id="instagram">
   <div class="g">
     <div class="cab sube">
@@ -401,16 +393,17 @@ footer a{text-decoration:none}
   </div>
 </section>
 
-<section class="reserva" id="reservar">
-  <div class="fondo lento" aria-hidden="true"><img src="media/17aef9172949.jpg" alt=""></div>
-  <div class="g sobre sube">
-    <p class="neon parpadeo" aria-hidden="true" data-i="cta_neon">¿Te esperamos?</p>
-    <h2 class="r" data-i="cta_h2">Tu hueco <span>te espera.</span></h2>
-    <p data-i="cta_p">Reserva en Booksy en un minuto: eliges servicio, día y hora, y te llega la confirmación al móvil.</p>
-    <div class="acciones">
-      <a class="btn grande" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_booksy">Reservar en Booksy</a>
-      <a class="btn acero grande" href="tel:+34936859204" data-i="llamar">Llamar · 936 85 92 04</a>
+<section class="opiniones" id="opiniones">
+  <div class="fondo lento" aria-hidden="true"><img src="media/7e269071d86f.jpg" alt=""></div>
+  <div class="g sobre">
+    <p class="eti" style="color:rgba(241,238,233,.55)" data-i="op_eti">Opiniones</p>
+    <div class="notas">
+      <div><b data-cuenta="5.0">5,0</b><div class="estrellas">★★★★★</div><span data-i="c_bk">243 reseñas en Booksy</span></div>
+      <div><b data-cuenta="4.7">4,7</b><div class="estrellas">★★★★★</div><span data-i="c_gg">71 reseñas en Google</span></div>
     </div>
+    <blockquote id="cita">«Texto de una reseña real sobre el trato y el resultado.»</blockquote>
+    <cite id="autora">Nombre · mes 2026</cite>
+    <div class="puntos" role="group" aria-label="Reseñas" data-ia="a_res"><button type="button" aria-pressed="true" aria-label="1"></button><button type="button" aria-pressed="false" aria-label="2"></button><button type="button" aria-pressed="false" aria-label="3"></button></div>
   </div>
 </section>
 
@@ -432,6 +425,19 @@ footer a{text-decoration:none}
         <tr><td data-i="h3">Sábado</td><td>9:30–14:00</td></tr>
         <tr><td data-i="h4">Domingo</td><td data-i="h5">Cerrado</td></tr>
       </table>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reservar">
+  <div class="fondo lento" aria-hidden="true"><img src="media/17aef9172949.jpg" alt=""></div>
+  <div class="g sobre sube">
+    <p class="neon parpadeo" aria-hidden="true" data-i="cta_neon">¿Te esperamos?</p>
+    <h2 class="r" data-i="cta_h2">Tu hueco <span>te espera.</span></h2>
+    <p data-i="cta_p">Reserva en Booksy en un minuto: eliges servicio, día y hora, y te llega la confirmación al móvil.</p>
+    <div class="acciones">
+      <a class="btn grande" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="reservar_booksy">Reservar en Booksy</a>
+      <a class="btn acero grande" href="tel:+34936859204" data-i="llamar">Llamar · 936 85 92 04</a>
     </div>
   </div>
 </section>
