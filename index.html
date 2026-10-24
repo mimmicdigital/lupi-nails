@@ -139,13 +139,13 @@ h2.r span{color:var(--cobre)}
 .elegido{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-top:6px}
 .elegido b{font:800 2rem/1 var(--rotulo);text-transform:uppercase}
 .elegido span{color:var(--gris);font-size:.9rem}
-.muestras{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(4,44px);gap:16px 18px;justify-content:start;margin-top:36px}
+.muestras{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(3,44px);gap:16px 18px;justify-content:start;margin-top:36px}
 .muestras button{all:unset;cursor:pointer;width:44px;aspect-ratio:1;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.18),inset 0 3px 5px rgba(255,255,255,.35),0 3px 6px -3px rgba(0,0,0,.35);transition:transform .25s,box-shadow .25s}
 .muestras button:hover{transform:scale(1.1)}
 .muestras button[aria-pressed="true"]{transform:scale(1.1);box-shadow:0 0 0 2px var(--cal-2),0 0 0 3.5px var(--tinta)}
 .muestras button:focus-visible{outline:2px solid var(--cobre);outline-offset:5px}
 .color .btn{grid-column:1;grid-row:3;justify-self:start;align-self:start;margin-top:36px}
-@media (max-width:900px){.color{padding:96px 0 90px}.color .g{grid-template-columns:auto minmax(0,1fr);column-gap:18px}.cab-col{grid-column:1/-1}.der{grid-row:2}.muestras{grid-template-columns:repeat(4,36px);gap:12px 10px;margin-top:30px;align-self:center}.muestras button{width:36px}.elegido{flex-direction:column;align-items:center;gap:4px}.elegido b{font-size:1.5rem}.color .btn{grid-column:1/-1;justify-self:center}}
+@media (max-width:900px){.color{padding:96px 0 90px}.color .g{grid-template-columns:auto minmax(0,1fr);column-gap:18px}.cab-col{grid-column:1/-1}.der{grid-row:2}.muestras{grid-template-columns:repeat(3,38px);gap:12px 12px;margin-top:30px;align-self:center}.muestras button{width:38px}.elegido{flex-direction:column;align-items:center;gap:4px}.elegido b{font-size:1.5rem}.color .btn{grid-column:1/-1;justify-self:center}}
 
 /* Opiniones: el salón de fondo, en movimiento lento */
 .opiniones{padding:140px 0;background:var(--techo);color:var(--cal);text-align:center;overflow:hidden}
