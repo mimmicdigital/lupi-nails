@@ -278,15 +278,24 @@ h2.r span{color:var(--cobre-txt)}
 .cab-op .estr{display:block;color:var(--cobre-2);font-size:var(--t20);letter-spacing:4px;margin-bottom:12px}
 .cab-op p{font-size:var(--t20);color:var(--suave);margin-top:12px}
 .cab-op .pend{color:var(--tenue)}
-.resenas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.resena{margin:0;background:var(--sup-o);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--dur) var(--ease)}
-.resena:hover{transform:translateY(-4px)}
-.resena img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.resena blockquote{margin:0;padding:20px 22px 0;font-size:var(--t16);line-height:1.55;color:var(--cal);flex:1}
-.resena figcaption{padding:16px 22px 22px;font-size:var(--t14);color:var(--tenue)}
-.resena figcaption b{color:var(--cal);font-weight:600}
-@media (max-width:1180px){.resenas{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.opiniones{padding:88px 0}.resenas{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-24px;padding:0 24px 6px;scroll-padding-inline:24px;scrollbar-width:none}.resenas::-webkit-scrollbar{display:none}.resena{flex:0 0 84%;scroll-snap-align:start}}
+/* reseñas solo texto: una destacada grande con comilla de rótulo y tres en columna con filete */
+.resenas{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px 72px;align-items:start}
+.resena{margin:0}
+.resena blockquote{margin:0;color:var(--cal)}
+.resena figcaption{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:18px;font-size:var(--t14);color:var(--tenue)}
+.resena figcaption b{font:800 var(--t20)/1 var(--rotulo);text-transform:uppercase;letter-spacing:.04em;color:var(--cal)}
+.resena .est{color:var(--cobre-2);letter-spacing:2px}
+.resena.grande{position:relative;padding-top:48px;isolation:isolate;align-self:center}
+.resena.grande::before{content:"\201C";position:absolute;z-index:-1;top:-40px;left:-14px;font:800 20rem/1 var(--rotulo);color:var(--raya-o)}
+.resena.grande blockquote{font:400 clamp(1.7rem,3.1vw,2.9rem)/1.24 var(--texto);letter-spacing:-.015em;max-width:22ch}
+.resena.grande figcaption{margin-top:28px}
+.resena.grande figcaption b{font-size:var(--t28)}
+.lista-op{display:flex;flex-direction:column}
+.lista-op .resena{padding:26px 0;border-top:1px solid var(--raya-o)}
+.lista-op .resena:last-child{border-bottom:1px solid var(--raya-o)}
+.lista-op blockquote{font-size:var(--t20);line-height:1.45}
+@media (max-width:900px){.resenas{grid-template-columns:1fr;gap:40px}.resena.grande{padding-top:36px}.resena.grande::before{font-size:13rem;top:-30px}}
+@media (max-width:600px){.opiniones{padding:88px 0}.resena.grande blockquote{font-size:1.5rem}}
 
 /* Guía de manicuras: tarjetas tipo carrusel de Instagram, sin la tarjeta de introducción */
 .ayuda{padding:120px 0 100px;overflow:hidden}
@@ -512,7 +521,7 @@ footer{background:var(--techo);color:var(--suave);padding:72px 0 36px;border-top
 <section class="servicios claro" id="servicios">
   <div class="g">
     <div class="cab-srv sube">
-      <h2 class="h-mix" data-i="srv_h2">Qué te hacemos <span>y cuánto cuesta</span></h2>
+      <h2 class="h-mix" data-i="srv_h2">Servicios <span>y precios</span></h2>
       <p class="sec" data-i="srv_p">Los mismos servicios, precios y duraciones que en nuestra ficha de Booksy, con lo que incluye cada uno. Si algo va aparte, te lo decimos aquí.</p>
     </div>
     <div class="pestanas-w" id="pestanas-w">
@@ -637,7 +646,7 @@ footer{background:var(--techo);color:var(--suave);padding:72px 0 36px;border-top
   </div>
 </section>
 
-<!-- Opiniones: reseñas cortas con el servicio y una foto del trabajo -->
+<!-- Opiniones: reseñas cortas con el servicio, solo texto -->
 <section class="opiniones oscuro" id="opiniones">
   <div class="g">
     <div class="cab-op sube">
@@ -649,10 +658,12 @@ footer{background:var(--techo);color:var(--suave);padding:72px 0 36px;border-top
       <a class="btn acero" href="https://booksy.com/es-es/12697_lupi-nails_salon-de-unas_48835_sant-just-desvern" target="_blank" rel="noopener" data-i="op_btn">Leer todas en Booksy</a>
     </div>
     <div class="resenas sube">
-      <figure class="resena"><img src="media/b145f0280418.webp" alt="La cabina de masajes con su neón" data-ialt="f7" loading="lazy"><blockquote data-i="r1">«Temía que doliera y fue muy relajante. Jessy me explicó cada paso y salí con las piernas ligeras.»</blockquote><figcaption><b>Mireia</b> · <span data-i="r1s">Maderoterapia con Jessy</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
-      <figure class="resena"><img src="media/d3485bf30ecb.webp" alt="Uñas babyboomer con la tarjeta I'm Lupi Nails" data-ialt="ig5" loading="lazy"><blockquote data-i="r2">«Primera visita y un 10: me lo explicaron todo y recuperaron unas uñas que llegaron muy mal.»</blockquote><figcaption><b>Silvia Pérez</b> · <span data-i="r2s">Retirada de gel con Jessy</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
-      <figure class="resena"><img src="media/17a4aab30ca3.webp" alt="Uñas de invierno con estrella roja y rayas" data-ialt="ig1" loading="lazy"><blockquote data-i="r3">«Todo genial, servicio de 10, muy recomendable.»</blockquote><figcaption><b>Cristina</b> · <span data-i="r3s">Semi Xpress con Jessy</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
-      <figure class="resena"><img src="media/a5c674d6f29f.webp" alt="Sillón de pedicura con cojín" data-ialt="f8" loading="lazy"><blockquote data-i="r4">«Trato muy agradable, muy eficiente y uñas muy bonitas.»</blockquote><figcaption><b>Maria</b> · <span data-i="r4s">Pedicura con Johanna</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
+      <figure class="resena grande"><blockquote data-i="r1">«Temía que doliera y fue muy relajante. Jessy me explicó cada paso y salí con las piernas ligeras.»</blockquote><figcaption><b>Mireia</b> <span data-i="r1s">Maderoterapia con Jessy</span> <span class="est" aria-hidden="true">★★★★★</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
+      <div class="lista-op">
+        <figure class="resena"><blockquote data-i="r2">«Primera visita y un 10: me lo explicaron todo y recuperaron unas uñas que llegaron muy mal.»</blockquote><figcaption><b>Silvia Pérez</b> <span data-i="r2s">Retirada de gel con Jessy</span> <span class="est" aria-hidden="true">★★★★★</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
+        <figure class="resena"><blockquote data-i="r3">«Todo genial, servicio de 10, muy recomendable.»</blockquote><figcaption><b>Cristina</b> <span data-i="r3s">Semi Xpress con Jessy</span> <span class="est" aria-hidden="true">★★★★★</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
+        <figure class="resena"><blockquote data-i="r4">«Trato muy agradable, muy eficiente y uñas muy bonitas.»</blockquote><figcaption><b>Maria</b> <span data-i="r4s">Pedicura con Johanna</span> <span class="est" aria-hidden="true">★★★★★</span> <span class="pend" data-i="ejemplo">resumen, falta el texto literal</span></figcaption></figure>
+      </div>
     </div>
   </div>
 </section>
@@ -956,7 +967,7 @@ claim:"Doble esterilització del material, marques prèmium i veganes com CND Sh
 col_p:"Toca un color i mira'l posat. Si t'agrada, digues-ho a la Valentina, la Johanna o la Jessy quan vinguis. <span class=\"pend\">carta de mostra</span>",
 ver_huecos:"Veure hores lliures a Booksy",llamar:"Trucar · 936 85 92 04",a_tipo:"Tipus de manicura",t_trad:"Tradicional",t_semi:"Semipermanent",t_shel:"Shellac",a_col:"Colors",
 marcas_eti:"Treballem amb",marcas_pend:"més marques, pendent",aviso:"Maqueta Mimmic · textos i preus provisionals",
-srv_h2:"Què et fem <span>i quant costa</span>",srv_p:"Els mateixos serveis, preus i durades que a la nostra fitxa de Booksy, amb el que inclou cada un. Si alguna cosa va a part, t'ho diem aquí.",
+srv_h2:"Serveis <span>i preus</span>",srv_p:"Els mateixos serveis, preus i durades que a la nostra fitxa de Booksy, amb el que inclou cada un. Si alguna cosa va a part, t'ho diem aquí.",
 a_serv:"Serveis",
 
 
@@ -1001,7 +1012,7 @@ claim:"Every tool sterilised twice, premium vegan brands like CND Shellac and Vi
 col_p:"Tap a colour and see it on. If you like it, tell Valentina, Johanna or Jessy when you come in. <span class=\"pend\">sample range</span>",
 ver_huecos:"See free slots on Booksy",llamar:"Call · +34 936 85 92 04",a_tipo:"Type of manicure",t_trad:"Classic",t_semi:"Gel polish",t_shel:"Shellac",a_col:"Colours",
 marcas_eti:"We work with",marcas_pend:"more brands to come",aviso:"Mimmic mock-up · placeholder copy and prices",
-srv_h2:"What we do <span>and what it costs</span>",srv_p:"The same services, prices and times as on our Booksy page, with what each one includes. If something costs extra, we say so here.",
+srv_h2:"Services <span>and prices</span>",srv_p:"The same services, prices and times as on our Booksy page, with what each one includes. If something costs extra, we say so here.",
 a_serv:"Services",
 
 
@@ -1046,7 +1057,7 @@ claim:"Doppelt sterilisierte Instrumente, vegane Premiummarken wie CND Shellac u
 col_p:"Tippe auf eine Farbe und sieh sie dir an. Gefällt sie dir, sag es Valentina, Johanna oder Jessy bei deinem Besuch. <span class=\"pend\">Beispielsortiment</span>",
 ver_huecos:"Freie Termine auf Booksy",llamar:"Anrufen · +34 936 85 92 04",a_tipo:"Art der Maniküre",t_trad:"Klassisch",t_semi:"Gel-Lack",t_shel:"Shellac",a_col:"Farben",
 marcas_eti:"Wir arbeiten mit",marcas_pend:"weitere Marken folgen",aviso:"Mimmic-Entwurf · Texte und Preise sind Platzhalter",
-srv_h2:"Was wir machen <span>und was es kostet</span>",srv_p:"Dieselben Leistungen, Preise und Zeiten wie in unserem Booksy-Profil, mit dem, was jede enthält. Was extra kostet, steht hier.",
+srv_h2:"Leistungen <span>und Preise</span>",srv_p:"Dieselben Leistungen, Preise und Zeiten wie in unserem Booksy-Profil, mit dem, was jede enthält. Was extra kostet, steht hier.",
 a_serv:"Leistungen",
 
 
