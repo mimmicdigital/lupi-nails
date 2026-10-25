@@ -173,11 +173,11 @@ h2.r span{color:var(--cobre-txt)}
 .entrada .acciones{display:flex;gap:12px;flex-wrap:wrap}
 .der{display:flex;flex-direction:column;align-items:center}
 .mano{position:relative;width:min(330px,24vw);aspect-ratio:520/785;filter:drop-shadow(0 22px 18px rgba(0,0,0,.45));-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
-.mano img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+.mano img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:opacity}
 .mano img.ve{opacity:1}
-/* el color se pinta de izquierda a derecha, uña a uña */
-.mano img.pinta{-webkit-mask-image:linear-gradient(100deg,#000 42%,transparent 58%);mask-image:linear-gradient(100deg,#000 42%,transparent 58%);-webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;animation:pinta 1s cubic-bezier(.6,0,.3,1) both}
-@keyframes pinta{from{-webkit-mask-position:100% 0;mask-position:100% 0}to{-webkit-mask-position:0 0;mask-position:0 0}}
+/* fundido corto: la mano nueva aparece encima y la anterior se retira al acabar */
+.mano img.ve.entra{transition:opacity .18s ease-out}
+.mano img.entra:not(.ve){opacity:0}
 .elegido{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-top:4px}
 .elegido b{font:800 var(--t28)/1 var(--rotulo);text-transform:uppercase;letter-spacing:.02em;color:var(--cal)}
 .elegido span{color:var(--tenue);font-size:var(--t14);font-variant-numeric:tabular-nums}
@@ -838,11 +838,11 @@ let tipo="semi";
   function elegir(i,pintar){
     if(i===actual)return;actual=i;
     const nueva=delante===a?b:a,vieja=delante;delante=nueva;
-    nueva.classList.remove("pinta");nueva.src=UNAS[i];
+    nueva.classList.remove("ve","entra");nueva.src=UNAS[i];
     nueva.style.zIndex=2;vieja.style.zIndex=1;
     const fin=()=>{if(delante===nueva){vieja.classList.remove("ve");vieja.alt=""}};
-    const ver=()=>{if(delante!==nueva)return;nueva.classList.add("ve");
-      if(pintar&&!reduce){void nueva.offsetWidth;nueva.classList.add("pinta");nueva.addEventListener("animationend",fin,{once:true})}else fin()};
+    const ver=()=>{if(delante!==nueva)return;
+      if(pintar&&!reduce){nueva.classList.add("entra");void nueva.offsetWidth;nueva.classList.add("ve");setTimeout(fin,200)}else{nueva.classList.add("ve");fin()}};
     (nueva.decode?nueva.decode():Promise.resolve()).catch(()=>{}).then(ver);
     bs.forEach(x=>x.setAttribute("aria-pressed",+x.dataset.c===i));
     rotular();
